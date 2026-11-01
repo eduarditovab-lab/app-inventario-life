@@ -1,0 +1,2879 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0f766e">
+<title>Sistema de Bodega</title>
+<link rel="icon" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Bodega">
+<style>
+/* ============ Variables y temas ============ */
+:root {
+  --brand: #0f766e;
+  --on-brand: #ffffff;
+  --brand-strong: color-mix(in srgb, var(--brand) 82%, #000);
+  --brand-soft: color-mix(in srgb, var(--brand) 11%, var(--surface));
+  --brand-line: color-mix(in srgb, var(--brand) 30%, var(--line));
+
+  --bg: #f3f5f7;
+  --surface: #ffffff;
+  --surface-2: #f7f9fa;
+  --text: #121826;
+  --muted: #667085;
+  --line: #e4e8ec;
+  --danger: #d92d20;
+  --danger-soft: color-mix(in srgb, var(--danger) 10%, var(--surface));
+  --warn: #b54708;
+  --warn-soft: color-mix(in srgb, #f79009 14%, var(--surface));
+  --ok: #067647;
+  --ok-soft: color-mix(in srgb, #12b76a 13%, var(--surface));
+
+  --radius: 16px;
+  --radius-sm: 11px;
+  --shadow: 0 1px 2px rgba(16, 24, 40, .05), 0 10px 28px -14px rgba(16, 24, 40, .16);
+  --shadow-lg: 0 24px 60px -20px rgba(16, 24, 40, .35);
+  --nav-h: 66px;
+}
+[data-theme="dark"] {
+  --bg: #0d1215;
+  --surface: #161d21;
+  --surface-2: #1b2328;
+  --text: #edf1f3;
+  --muted: #94a3ab;
+  --line: #26313a;
+  --danger: #f97066;
+  --warn: #fdb022;
+  --ok: #47cd89;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 10px 28px -14px rgba(0, 0, 0, .6);
+  --shadow-lg: 0 24px 60px -20px rgba(0, 0, 0, .8);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 15px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+body.no-scroll { overflow: hidden; }
+h1, h2, h3, h4, p { margin: 0; }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+[hidden] { display: none !important; }
+#print-area { display: none; }
+
+.ic { width: 20px; height: 20px; flex: none; }
+.muted { color: var(--muted); }
+.num { font-variant-numeric: tabular-nums; }
+
+/* ============ Estructura ============ */
+.app { display: grid; grid-template-columns: 236px minmax(0, 1fr); min-height: 100dvh; }
+.sidebar {
+  position: sticky; top: 0; height: 100dvh;
+  display: flex; flex-direction: column; gap: 6px;
+  padding: 20px 14px; background: var(--surface); border-right: 1px solid var(--line);
+}
+.brand { display: flex; align-items: center; gap: 11px; min-width: 0; padding: 4px 8px 18px; }
+.brand-mark {
+  width: 38px; height: 38px; border-radius: 11px; flex: none; overflow: hidden;
+  display: grid; place-items: center;
+  background: var(--brand); color: var(--on-brand); font-weight: 750; font-size: 18px;
+}
+.brand-mark img { width: 100%; height: 100%; object-fit: cover; background: #fff; }
+.brand-txt { min-width: 0; display: flex; flex-direction: column; }
+.brand-txt strong { font-size: 15.5px; font-weight: 700; letter-spacing: -.01em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.brand-txt small { color: var(--muted); font-size: 12px; }
+
+.nav { display: flex; flex-direction: column; gap: 3px; }
+.nav-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 11px 12px; border-radius: 12px;
+  color: var(--muted); text-decoration: none; font-weight: 600; font-size: 14.5px;
+  transition: background .15s, color .15s;
+}
+.nav-item:hover { background: var(--surface-2); color: var(--text); }
+.nav-item.active { background: var(--brand-soft); color: var(--brand-strong); }
+[data-theme="dark"] .nav-item.active { color: color-mix(in srgb, var(--brand) 55%, #fff); }
+.side-foot { margin-top: auto; padding: 10px 8px 0; font-size: 12.5px; color: var(--muted); }
+
+.main-col { min-width: 0; }
+.topbar {
+  position: sticky; top: 0; z-index: 20;
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 20px;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid transparent;
+}
+.topbar .brand { padding: 0; display: none; }
+.spacer { flex: 1; }
+.chip-btn {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 8px 13px; border-radius: 999px;
+  background: var(--surface); border: 1px solid var(--line);
+  font-size: 13px; font-weight: 600; white-space: nowrap;
+}
+.chip-btn:hover { border-color: var(--brand-line); }
+.chip-btn .ic { width: 16px; height: 16px; }
+.chip-btn.ok .ic { color: var(--ok); }
+.chip-btn.warn { background: var(--warn-soft); border-color: transparent; color: var(--warn); }
+.chip-btn.err { background: var(--danger-soft); border-color: transparent; color: var(--danger); }
+.chip-btn.tasa b { color: var(--brand-strong); }
+[data-theme="dark"] .chip-btn.tasa b { color: color-mix(in srgb, var(--brand) 55%, #fff); }
+
+@media (max-width: 560px) {
+  .chip-btn .hide-sm { display: none; }
+  .chip-btn { padding: 8px 11px; }
+  .topbar .brand-txt small { display: none; }
+}
+
+.view { max-width: 1180px; margin: 0 auto; padding: 8px 20px 60px; }
+.page-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 14px; flex-wrap: wrap; margin: 6px 0 18px; }
+.page-head h1 { font-size: 26px; font-weight: 750; letter-spacing: -.02em; }
+.sub { color: var(--muted); margin-top: 2px; }
+.head-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.bottom-nav {
+  display: none; position: fixed; left: 0; right: 0; bottom: 0; z-index: 30;
+  height: calc(var(--nav-h) + env(safe-area-inset-bottom));
+  padding: 6px 6px env(safe-area-inset-bottom);
+  background: var(--surface); border-top: 1px solid var(--line);
+}
+.bottom-nav .nav-item {
+  flex: 1; flex-direction: column; justify-content: center; gap: 3px;
+  padding: 6px 2px; font-size: 11.5px; border-radius: 12px;
+}
+
+@media (max-width: 899px) {
+  .app { grid-template-columns: minmax(0, 1fr); }
+  .sidebar { display: none; }
+  .bottom-nav { display: flex; }
+  .topbar { padding: 10px 14px; }
+  .topbar .brand { display: flex; }
+  .view { padding: 4px 14px calc(var(--nav-h) + 40px); }
+  .page-head h1 { font-size: 23px; }
+}
+
+/* ============ Botones y formularios ============ */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 10px 16px; min-height: 42px;
+  border-radius: 12px; border: 1px solid var(--line);
+  background: var(--surface); font-weight: 600; font-size: 14.5px;
+  transition: background .15s, border-color .15s, transform .05s;
+}
+.btn:hover { border-color: var(--brand-line); background: var(--surface-2); }
+.btn:active { transform: translateY(1px); }
+.btn:disabled { opacity: .5; pointer-events: none; }
+.btn-primary { background: var(--brand); border-color: var(--brand); color: var(--on-brand); }
+.btn-primary:hover { background: var(--brand-strong); border-color: var(--brand-strong); }
+.btn-danger { background: var(--danger); border-color: var(--danger); color: #fff; }
+.btn-danger:hover { background: color-mix(in srgb, var(--danger) 85%, #000); border-color: transparent; }
+.btn-ghost { border-color: transparent; background: transparent; }
+.btn-soft { background: var(--brand-soft); border-color: transparent; color: var(--brand-strong); }
+[data-theme="dark"] .btn-soft { color: color-mix(in srgb, var(--brand) 55%, #fff); }
+.btn-sm { min-height: 34px; padding: 6px 11px; font-size: 13px; border-radius: 10px; }
+.btn-block { width: 100%; }
+.btn-lg { min-height: 52px; font-size: 16px; border-radius: 14px; }
+.icon-btn {
+  display: inline-grid; place-items: center; width: 38px; height: 38px; border-radius: 11px;
+  border: 1px solid transparent; background: transparent; color: var(--muted);
+}
+.icon-btn:hover { background: var(--surface-2); color: var(--text); }
+.icon-btn.danger:hover { background: var(--danger-soft); color: var(--danger); }
+.link { background: none; border: 0; padding: 0; color: var(--brand-strong); font-weight: 600; font-size: 13.5px; }
+[data-theme="dark"] .link { color: color-mix(in srgb, var(--brand) 55%, #fff); }
+.link:hover { text-decoration: underline; }
+
+.field { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.field > label, .lbl { font-size: 12.5px; font-weight: 650; color: var(--muted); letter-spacing: .01em; }
+.input, .select {
+  width: 100%; min-height: 44px; padding: 10px 13px;
+  background: var(--surface-2); border: 1px solid var(--line); border-radius: 12px;
+  font-size: 16px; outline: none; transition: border-color .15s, box-shadow .15s, background .15s;
+}
+.input:focus, .select:focus {
+  border-color: var(--brand); background: var(--surface);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--brand) 16%, transparent);
+}
+.input:disabled, .select:disabled { opacity: .6; }
+.hint { font-size: 12.5px; color: var(--muted); }
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.field-row.three { grid-template-columns: repeat(3, 1fr); }
+.form { display: flex; flex-direction: column; gap: 14px; }
+@media (max-width: 520px) { .field-row.three { grid-template-columns: 1fr 1fr; } }
+
+.search {
+  display: flex; align-items: center; gap: 10px; padding: 0 14px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 14px; min-height: 46px;
+}
+.search:focus-within { border-color: var(--brand); box-shadow: 0 0 0 4px color-mix(in srgb, var(--brand) 14%, transparent); }
+.search .ic { color: var(--muted); }
+.search input { flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; font-size: 16px; padding: 11px 0; }
+
+.seg { display: inline-flex; padding: 4px; gap: 2px; background: var(--surface-2); border: 1px solid var(--line); border-radius: 13px; }
+.seg button {
+  border: 0; background: transparent; padding: 8px 14px; border-radius: 10px;
+  font-weight: 650; font-size: 13.5px; color: var(--muted);
+}
+.seg button.on { background: var(--surface); color: var(--text); box-shadow: 0 1px 3px rgba(16, 24, 40, .12); }
+.seg.full { display: flex; width: 100%; }
+.seg.full button { flex: 1; }
+
+.chips { display: flex; gap: 8px; overflow-x: auto; padding: 12px 0 14px; scrollbar-width: none; }
+.chips::-webkit-scrollbar { display: none; }
+.chip-f {
+  flex: none; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line);
+  background: var(--surface); font-size: 13.5px; font-weight: 600; color: var(--muted);
+}
+.chip-f.on { background: var(--brand); border-color: var(--brand); color: var(--on-brand); }
+.chip-f .n { opacity: .75; margin-left: 4px; font-weight: 500; }
+
+.switch-line { display: flex; align-items: center; gap: 12px; padding: 10px 0; cursor: pointer; font-weight: 600; }
+.switch-line input { position: absolute; opacity: 0; pointer-events: none; }
+.switch-line .sw {
+  position: relative; width: 44px; height: 26px; border-radius: 999px; flex: none;
+  background: var(--line); transition: background .2s;
+}
+.switch-line .sw::after {
+  content: ""; position: absolute; top: 3px; left: 3px; width: 20px; height: 20px; border-radius: 50%;
+  background: #fff; box-shadow: 0 1px 3px rgba(0, 0, 0, .3); transition: transform .2s;
+}
+.switch-line input:checked + .sw { background: var(--brand); }
+.switch-line input:checked + .sw::after { transform: translateX(18px); }
+.switch-line input:focus-visible + .sw { box-shadow: 0 0 0 4px color-mix(in srgb, var(--brand) 25%, transparent); }
+
+.chip { display: inline-block; padding: 2px 9px; border-radius: 999px; background: var(--surface-2); border: 1px solid var(--line); font-size: 12px; font-weight: 600; color: var(--muted); }
+.badge { display: inline-flex; align-items: center; gap: 5px; padding: 3px 9px; border-radius: 999px; font-size: 12px; font-weight: 700; }
+.badge.low { background: var(--warn-soft); color: var(--warn); }
+.badge.out { background: var(--danger-soft); color: var(--danger); }
+.badge.ok { background: var(--ok-soft); color: var(--ok); }
+.badge.void { background: var(--danger-soft); color: var(--danger); }
+
+/* ============ Tarjetas ============ */
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; box-shadow: var(--shadow); }
+.card + .card { margin-top: 16px; }
+.card h3 { font-size: 16px; font-weight: 700; letter-spacing: -.01em; }
+.card-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 14px; }
+.grid { display: grid; gap: 16px; }
+.grid.cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.grid.cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid.cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 760px) { .grid.cols-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.grid.main-side { grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); align-items: start; }
+.grid > .card + .card { margin-top: 0; }
+@media (max-width: 1000px) { .grid.cols-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } .grid.main-side { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 640px) { .grid.cols-2 { grid-template-columns: minmax(0, 1fr); } .card { padding: 15px; } }
+
+.stat { display: flex; flex-direction: column; gap: 4px; position: relative; overflow: hidden; }
+.stat .lab { font-size: 13px; font-weight: 600; color: var(--muted); display: flex; align-items: center; gap: 8px; }
+.stat .lab .ic { width: 17px; height: 17px; }
+.stat .val { font-size: 27px; font-weight: 750; letter-spacing: -.02em; line-height: 1.15; margin-top: 4px; }
+.stat .sec { font-size: 13px; color: var(--muted); }
+.stat.accent { background: var(--brand); border-color: var(--brand); color: var(--on-brand); }
+.stat.accent .lab, .stat.accent .sec { color: color-mix(in srgb, var(--on-brand) 78%, transparent); }
+@media (max-width: 640px) { .stat .val { font-size: 22px; } }
+
+.banner {
+  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+  padding: 13px 16px; border-radius: 14px; margin-bottom: 16px;
+  background: var(--warn-soft); color: var(--warn); font-weight: 600;
+}
+.banner .btn { margin-left: auto; }
+
+.empty { text-align: center; padding: 42px 18px; color: var(--muted); }
+.empty .ic { width: 38px; height: 38px; opacity: .45; margin-bottom: 10px; }
+.empty h4 { font-size: 16px; color: var(--text); margin-bottom: 4px; }
+.empty .btn { margin-top: 14px; }
+
+/* ============ Inventario ============ */
+.products { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 14px; }
+.prod {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 15px; display: flex; flex-direction: column; gap: 12px; box-shadow: var(--shadow);
+}
+.prod-top { display: flex; gap: 12px; align-items: center; }
+.avatar {
+  --h: 180;
+  width: 44px; height: 44px; border-radius: 13px; flex: none; display: grid; place-items: center;
+  font-weight: 750; font-size: 18px;
+  background: hsl(var(--h) 55% 91%); color: hsl(var(--h) 55% 28%);
+}
+[data-theme="dark"] .avatar { background: hsl(var(--h) 30% 22%); color: hsl(var(--h) 60% 80%); }
+.prod-name { min-width: 0; flex: 1; }
+.prod-name h4 { font-size: 15.5px; font-weight: 700; line-height: 1.25; overflow-wrap: anywhere; }
+.prod-name .meta { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; margin-top: 4px; font-size: 12.5px; color: var(--muted); }
+.prod-mid { display: flex; align-items: flex-end; justify-content: space-between; gap: 10px; }
+.price b { font-size: 19px; font-weight: 750; letter-spacing: -.01em; }
+.price small { display: block; color: var(--muted); font-size: 12.5px; }
+.stock { text-align: right; }
+.stock b { font-size: 19px; font-weight: 750; }
+.stock small { display: block; color: var(--muted); font-size: 12.5px; }
+.stock.low b { color: var(--warn); }
+.stock.out b { color: var(--danger); }
+.meter { height: 6px; border-radius: 6px; background: var(--surface-2); overflow: hidden; border: 1px solid var(--line); }
+.meter i { display: block; height: 100%; background: var(--brand); border-radius: 6px; }
+.meter.low i { background: #f79009; }
+.meter.out i { background: var(--danger); }
+.prod-actions { display: flex; gap: 6px; padding-top: 2px; }
+.prod-actions .btn { flex: 1; }
+
+/* ============ Punto de venta ============ */
+.pos { display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 18px; align-items: start; }
+.pos-cart { position: sticky; top: 68px; max-height: calc(100dvh - 90px); overflow: auto; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+.tile {
+  text-align: left; display: flex; flex-direction: column; gap: 8px; min-height: 112px;
+  padding: 13px; border-radius: 14px; border: 1px solid var(--line); background: var(--surface);
+  box-shadow: var(--shadow); transition: border-color .15s, transform .05s;
+}
+.tile:hover { border-color: var(--brand-line); }
+.tile:active { transform: scale(.98); }
+.tile.out { opacity: .5; pointer-events: none; }
+.tile .t-name { font-weight: 700; font-size: 14.5px; line-height: 1.25; overflow-wrap: anywhere; }
+.tile .t-pres { font-size: 12.5px; color: var(--muted); margin-top: 2px; }
+.tile .t-foot { margin-top: auto; display: flex; justify-content: space-between; align-items: flex-end; gap: 6px; }
+.tile .t-price { font-weight: 750; font-size: 16px; }
+.tile .t-price small { color: var(--muted); font-weight: 500; font-size: 11.5px; }
+.tile .t-stock { font-size: 12px; color: var(--muted); text-align: right; }
+.tile .t-stock.low { color: var(--warn); font-weight: 650; }
+
+.pos-switch { display: none; margin-bottom: 12px; }
+.pos-switch .count { display: inline-grid; place-items: center; min-width: 20px; height: 20px; padding: 0 6px; margin-left: 4px; border-radius: 99px; background: var(--brand); color: var(--on-brand); font-size: 11.5px; }
+.cart-bar {
+  display: none; position: fixed; z-index: 25; left: 12px; right: 12px;
+  bottom: calc(var(--nav-h) + 10px + env(safe-area-inset-bottom));
+  align-items: center; justify-content: space-between; gap: 12px;
+  padding: 11px 14px; border-radius: 16px; border: 0;
+  background: var(--brand); color: var(--on-brand); box-shadow: var(--shadow-lg);
+}
+.cart-bar b { font-size: 17px; }
+.cart-bar small { display: block; opacity: .85; }
+.cart-bar .btn { background: rgba(255, 255, 255, .18); border-color: transparent; color: inherit; }
+
+@media (max-width: 899px) {
+  .pos { grid-template-columns: minmax(0, 1fr); }
+  .pos-switch { display: flex; }
+  .pos[data-pane="productos"] .pos-cart { display: none; }
+  .pos[data-pane="carrito"] .pos-catalog { display: none; }
+  .pos-cart { position: static; max-height: none; }
+  .cart-bar.show { display: flex; }
+}
+
+.cart-item { display: grid; grid-template-columns: 1fr auto; gap: 4px 10px; padding: 12px 0; border-bottom: 1px dashed var(--line); }
+.cart-item:last-child { border-bottom: 0; }
+.ci-name { font-weight: 650; line-height: 1.3; overflow-wrap: anywhere; }
+.ci-sub { color: var(--muted); font-size: 12.5px; }
+.ci-price { text-align: right; font-weight: 700; }
+.ci-price small { display: block; color: var(--muted); font-weight: 500; font-size: 12px; }
+.ci-ctrl { grid-column: 1 / -1; display: flex; align-items: center; gap: 6px; }
+.stepper { display: inline-flex; align-items: center; border: 1px solid var(--line); border-radius: 11px; overflow: hidden; }
+.stepper button { width: 36px; height: 34px; border: 0; background: var(--surface-2); display: grid; place-items: center; }
+.stepper button:hover { background: var(--brand-soft); }
+.stepper .q { min-width: 70px; text-align: center; font-weight: 700; padding: 0 8px; background: var(--surface); border: 0; height: 34px; }
+.cart-opts { margin-top: 12px; padding-top: 14px; border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: 12px; }
+.totals { margin-top: 14px; padding: 14px; border-radius: 14px; background: var(--surface-2); border: 1px solid var(--line); display: flex; flex-direction: column; gap: 7px; }
+.totals .row { display: flex; justify-content: space-between; color: var(--muted); font-size: 14px; }
+.totals .row b { color: var(--text); font-weight: 650; }
+.totals .grand { margin-top: 6px; padding-top: 10px; border-top: 1px dashed var(--line); display: flex; justify-content: space-between; align-items: baseline; }
+.totals .grand span { font-weight: 650; color: var(--muted); }
+.totals .grand strong { font-size: 26px; font-weight: 800; letter-spacing: -.02em; }
+.totals .grand.bs strong { color: var(--brand-strong); }
+[data-theme="dark"] .totals .grand.bs strong { color: color-mix(in srgb, var(--brand) 55%, #fff); }
+.totals .grand.vuelto strong { color: var(--ok); }
+.totals .grand.vuelto.falta strong { color: var(--danger); }
+.totals .tasa-note { font-size: 12px; color: var(--muted); text-align: right; }
+.cart-actions { display: grid; grid-template-columns: 1fr 1.5fr; gap: 10px; margin-top: 14px; }
+
+/* ============ Historial ============ */
+.period-bar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+.period-nav { display: flex; align-items: center; gap: 4px; }
+.period-nav .label { min-width: 190px; text-align: center; font-weight: 700; }
+.period-nav input[type=date] { position: absolute; opacity: 0; width: 1px; height: 1px; pointer-events: none; }
+.bars { display: flex; align-items: flex-end; gap: 6px; height: calc(var(--bh, 140px) + 38px); }
+.bar-col { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 4px; height: 100%; }
+.bar-val { font-size: 11px; color: var(--muted); height: 14px; white-space: nowrap; }
+.bar-track { flex: 1; width: 100%; display: flex; align-items: flex-end; justify-content: center; }
+.bar-fill { width: min(100%, 36px); border-radius: 8px 8px 3px 3px; background: color-mix(in srgb, var(--brand) 38%, var(--surface-2)); min-height: 0; transition: height .3s; }
+.bar-fill.hl { background: var(--brand); }
+.bar-lab { font-size: 11.5px; color: var(--muted); height: 14px; white-space: nowrap; }
+
+.sale { border: 1px solid var(--line); border-radius: 14px; background: var(--surface); margin-bottom: 10px; overflow: hidden; }
+.sale summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 13px 15px; }
+.sale summary::-webkit-details-marker { display: none; }
+.sale[open] summary { background: var(--surface-2); }
+.sale .s-l b, .sale .s-r b { font-weight: 700; }
+.sale .s-l small, .sale .s-r small { display: block; color: var(--muted); font-size: 12.5px; }
+.sale .s-r { text-align: right; }
+.sale.void { opacity: .65; }
+.sale.void .s-r b { text-decoration: line-through; }
+.sale-body { padding: 4px 15px 15px; border-top: 1px solid var(--line); }
+.line { display: flex; justify-content: space-between; gap: 12px; padding: 7px 0; font-size: 14px; border-bottom: 1px dashed var(--line); }
+.line:last-of-type { border-bottom: 0; }
+.line small { color: var(--muted); display: block; }
+.sale-sum { margin-top: 8px; font-size: 13.5px; color: var(--muted); }
+.sale-sum div { display: flex; justify-content: space-between; padding: 2px 0; }
+.sale-sum .t { color: var(--text); font-weight: 750; font-size: 16px; padding-top: 6px; }
+.sale-actions { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+.rank { display: flex; flex-direction: column; gap: 12px; }
+.rank-row .rk-top { display: flex; justify-content: space-between; gap: 10px; font-size: 14px; }
+.rank-row .rk-top span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.rank-row .meter { margin-top: 6px; }
+.mov { display: flex; gap: 12px; align-items: center; padding: 11px 0; border-bottom: 1px solid var(--line); }
+.mov:last-child { border-bottom: 0; }
+.mov .m-main { flex: 1; min-width: 0; }
+.mov .m-main b { display: block; font-weight: 650; overflow-wrap: anywhere; }
+.mov .m-main small { color: var(--muted); }
+.mov .m-q { font-weight: 750; white-space: nowrap; }
+.mov .m-q.pos { color: var(--ok); }
+.mov .m-q.neg { color: var(--danger); }
+
+/* ============ Ajustes ============ */
+.swatches { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.swatch { width: 38px; height: 38px; border-radius: 50%; border: 3px solid var(--surface); box-shadow: 0 0 0 1px var(--line); position: relative; }
+.swatch.on { box-shadow: 0 0 0 2.5px var(--text); }
+.swatch.on::after { content: ""; position: absolute; inset: 0; margin: auto; width: 9px; height: 15px; border: solid #fff; border-width: 0 3px 3px 0; transform: translate(0, -1px) rotate(45deg); width: 8px; height: 14px; }
+.color-custom { width: 44px; height: 38px; padding: 0; border: 1px solid var(--line); border-radius: 10px; background: none; cursor: pointer; }
+.logo-edit { display: flex; align-items: center; gap: 14px; }
+.logo-edit .brand-mark { width: 64px; height: 64px; border-radius: 16px; font-size: 26px; }
+.cat-list { display: flex; flex-wrap: wrap; gap: 8px; }
+.cat-pill { display: inline-flex; align-items: center; gap: 4px; padding: 6px 6px 6px 12px; border-radius: 999px; background: var(--surface-2); border: 1px solid var(--line); font-weight: 600; font-size: 13.5px; }
+.cat-pill button { border: 0; background: transparent; display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; color: var(--muted); }
+.cat-pill button:hover { background: var(--danger-soft); color: var(--danger); }
+.cat-pill button .ic { width: 14px; height: 14px; }
+.stack { display: flex; flex-direction: column; gap: 14px; }
+.row-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.kv { display: flex; justify-content: space-between; gap: 12px; padding: 9px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
+.kv:last-child { border-bottom: 0; }
+.kv span:first-child { color: var(--muted); }
+
+/* ============ Modales ============ */
+.modal-wrap {
+  position: fixed; inset: 0; z-index: 100; display: flex; align-items: center; justify-content: center;
+  padding: 16px; background: rgba(8, 12, 16, .5); opacity: 0; transition: opacity .18s;
+}
+.modal-wrap.open { opacity: 1; }
+.modal {
+  width: 100%; max-width: 480px; max-height: calc(100dvh - 32px);
+  display: flex; flex-direction: column;
+  background: var(--surface); border-radius: 20px; box-shadow: var(--shadow-lg);
+  transform: translateY(14px) scale(.98); transition: transform .2s;
+}
+.modal-wrap.open .modal { transform: none; }
+.modal.wide { max-width: 560px; }
+.modal-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 16px 16px 6px 20px; }
+.modal-head h3 { font-size: 18px; font-weight: 750; letter-spacing: -.01em; }
+.modal-body { padding: 10px 20px 18px; overflow: auto; }
+.modal-foot { display: flex; gap: 10px; justify-content: flex-end; flex-wrap: wrap; padding: 14px 20px calc(16px + env(safe-area-inset-bottom)); border-top: 1px solid var(--line); }
+.modal-foot .btn { flex: 1 1 auto; }
+.muted-p { color: var(--muted); line-height: 1.5; }
+.tip { padding: 11px 13px; border-radius: 12px; background: var(--brand-soft); font-size: 13.5px; color: var(--text); }
+.preview-box { padding: 12px 14px; border-radius: 12px; background: var(--surface-2); border: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.preview-box b { font-size: 18px; }
+.quick { display: flex; gap: 8px; flex-wrap: wrap; }
+.ticket-wrap { display: flex; justify-content: center; padding: 6px 0 4px; background: var(--surface-2); border-radius: 14px; max-height: 58dvh; overflow: auto; }
+.ticket-img { width: min(100%, 330px); height: auto; box-shadow: 0 4px 18px rgba(0, 0, 0, .18); background: #fff; margin: 8px 0; }
+.btn-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; width: 100%; }
+.btn-row .btn { flex-direction: column; gap: 4px; padding: 9px 4px; font-size: 12.5px; min-height: 58px; }
+.btn-row.full { grid-template-columns: 1fr; }
+
+@media (max-width: 640px) {
+  .modal-wrap { align-items: flex-end; padding: 0; }
+  .modal { max-width: none; border-radius: 22px 22px 0 0; max-height: 92dvh; transform: translateY(40px); }
+  .modal-head { padding-top: 18px; }
+}
+
+/* ============ Avisos ============ */
+#toasts { position: fixed; z-index: 200; left: 50%; transform: translateX(-50%); top: 14px; display: flex; flex-direction: column; gap: 8px; width: min(92vw, 420px); pointer-events: none; }
+.toast {
+  display: flex; align-items: center; gap: 10px; padding: 12px 16px; border-radius: 14px;
+  background: #101828; color: #fff; font-weight: 600; font-size: 14px; box-shadow: var(--shadow-lg);
+  animation: drop .22s ease-out; transition: opacity .25s, transform .25s;
+}
+.toast.err { background: var(--danger); }
+.toast .ic { width: 18px; height: 18px; }
+.toast.out { opacity: 0; transform: translateY(-8px); }
+@keyframes drop { from { opacity: 0; transform: translateY(-10px); } }
+
+/* ============ Bienvenida ============ */
+.welcome { min-height: 100dvh; display: grid; place-items: center; padding: 20px; }
+.welcome-card { width: min(100%, 460px); text-align: center; padding: 34px 26px; }
+.welcome-card .brand-mark { width: 64px; height: 64px; font-size: 28px; border-radius: 18px; margin: 0 auto 18px; }
+.welcome-card h1 { font-size: 26px; font-weight: 800; letter-spacing: -.02em; }
+.welcome-card p { color: var(--muted); margin: 10px 0 22px; line-height: 1.55; }
+.welcome-card .stack { gap: 10px; }
+.welcome-card .small { font-size: 12.5px; margin: 18px 0 0; }
+
+@media print {
+
+  html, body { background: #fff !important; margin: 0; padding: 0; }
+  #root, #toasts, .modal-wrap { display: none !important; }
+  #print-area { display: block !important; }
+  .print-ticket { display: block; width: 80mm; max-width: 100%; margin: 0 auto; }
+
+}
+</style>
+</head>
+<body>
+
+<div id="root"></div>
+<div id="toasts" aria-live="polite"></div>
+<div id="print-area"></div>
+<style id="page-style"></style>
+
+<script>
+'use strict';
+
+/* =====================================================================
+   utils.js — utilidades generales: estado global, formatos, íconos,
+   ventanas modales, avisos y cálculos de dinero/inventario.
+   ===================================================================== */
+
+/* ---------- Estado global ---------- */
+const S = {
+  db: null,
+  view: 'inicio',
+  inv: { q: '', f: 'todos' },
+  pos: { q: '', cat: '', cart: [], cliente: '', pago: 'Efectivo USD', descPct: 0, aplicaImp: false, pane: 'productos' },
+  hist: { tab: 'ventas', per: 'dia', ref: new Date() }
+};
+
+const Actions = {};   // data-action="x"  -> click
+const Inputs = {};    // data-input="x"   -> input
+const Changes = {};   // data-change="x"  -> change
+
+/* ---------- DOM ---------- */
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const uid = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
+const round2 = n => Math.round((Number(n) + Number.EPSILON) * 100) / 100;
+const rq = n => Math.round(Number(n) * 1e6) / 1e6;          // redondeo de cantidades
+const num = v => { const n = parseFloat(String(v ?? '').replace(',', '.')); return isNaN(n) ? NaN : n; };
+const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
+const norm = s => String(s ?? '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+
+/* ---------- Formatos ---------- */
+function fmtNum(n, dec = 2) {                  // 1.234,56
+  n = Number(n) || 0;
+  const neg = n < 0; n = Math.abs(n);
+  const [i, d] = n.toFixed(dec).split('.');
+  const g = i.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+  return (neg ? '-' : '') + g + (dec > 0 ? ',' + d : '');
+}
+const usd = n => '$' + fmtNum(n, 2);
+const bs = n => 'Bs ' + fmtNum(n, 2);
+const pagoTxt = v => v.pagoDetalle ? 'Otro: ' + v.pagoDetalle : (v.pago || '');
+const fmtM = (m, n) => m === 'Bs' ? bs(n) : usd(n);
+function fmtQty(n) {                           // hasta 3 decimales, sin ceros sobrantes
+  let s = fmtNum(rq(n), 3);
+  if (s.includes(',')) s = s.replace(/0+$/, '').replace(/,$/, '');
+  return s;
+}
+const pad = n => String(n).padStart(2, '0');
+const pad6 = n => String(n).padStart(6, '0');
+const MESES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
+const MES3 = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
+const DIAS = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
+const DIA3 = ['dom', 'lun', 'mar', 'mié', 'jue', 'vie', 'sáb'];
+const fmtDate = d => `${pad(d.getDate())}/${pad(d.getMonth() + 1)}/${d.getFullYear()}`;
+const fmtTime = d => { let h = d.getHours(); const ap = h >= 12 ? 'p. m.' : 'a. m.'; h = h % 12 || 12; return `${pad(h)}:${pad(d.getMinutes())} ${ap}`; };
+const fmtDateTime = d => fmtDate(d) + ' ' + fmtTime(d);
+const toInputDate = d => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+const fromInputDate = s => { const [y, m, d] = s.split('-').map(Number); return new Date(y, m - 1, d); };
+const startOfDay = d => new Date(d.getFullYear(), d.getMonth(), d.getDate());
+const addDays = (d, n) => { const x = new Date(d); x.setDate(x.getDate() + n); return x; };
+const startOfWeek = d => { const x = startOfDay(d); x.setDate(x.getDate() - ((x.getDay() + 6) % 7)); return x; };
+
+function rangoPeriodo(per, ref) {
+  const d0 = startOfDay(ref); let from, to, label;
+  if (per === 'dia') {
+    from = d0; to = addDays(d0, 1);
+    label = `${cap(DIAS[d0.getDay()])} ${d0.getDate()} de ${MESES[d0.getMonth()]} ${d0.getFullYear()}`;
+  } else if (per === 'semana') {
+    from = startOfWeek(d0); to = addDays(from, 7);
+    const last = addDays(to, -1);
+    label = `${from.getDate()} ${MES3[from.getMonth()]} – ${last.getDate()} ${MES3[last.getMonth()]} ${last.getFullYear()}`;
+  } else if (per === 'mes') {
+    from = new Date(d0.getFullYear(), d0.getMonth(), 1); to = new Date(d0.getFullYear(), d0.getMonth() + 1, 1);
+    label = `${cap(MESES[d0.getMonth()])} ${d0.getFullYear()}`;
+  } else {
+    from = new Date(d0.getFullYear(), 0, 1); to = new Date(d0.getFullYear() + 1, 0, 1);
+    label = String(d0.getFullYear());
+  }
+  return { from, to, label };
+}
+function shiftPeriodo(per, ref, dir) {
+  const d = new Date(ref);
+  if (per === 'dia') d.setDate(d.getDate() + dir);
+  else if (per === 'semana') d.setDate(d.getDate() + 7 * dir);
+  else if (per === 'mes') { d.setDate(1); d.setMonth(d.getMonth() + dir); }
+  else d.setFullYear(d.getFullYear() + dir);
+  return d;
+}
+const PERIODOS = { dia: 'Día', semana: 'Semana', mes: 'Mes', ano: 'Año' };
+
+/* ---------- Unidades ---------- */
+const UNITS = {
+  und: { label: 'Unidad', short: 'und', group: 'und', factor: 1 },
+  kg: { label: 'Kilogramo (kg)', short: 'kg', group: 'peso', factor: 1e6 },
+  g: { label: 'Gramo (g)', short: 'g', group: 'peso', factor: 1e3 },
+  mg: { label: 'Miligramo (mg)', short: 'mg', group: 'peso', factor: 1 },
+  l: { label: 'Litro (L)', short: 'L', group: 'vol', factor: 1e3 },
+  ml: { label: 'Mililitro (ml)', short: 'ml', group: 'vol', factor: 1 }
+};
+const convert = (q, from, to) => rq(q * UNITS[from].factor / UNITS[to].factor);
+const compatibleUnits = u => Object.keys(UNITS).filter(k => UNITS[k].group === UNITS[u].group);
+const uShort = u => (UNITS[u] || UNITS.und).short;
+const MIN_DEFAULT = { und: 5, kg: 5, l: 5, g: 500, ml: 500, mg: 5000 };
+const nombreCompleto = p => p.nombre + (p.presentacion ? ' ' + p.presentacion : '');
+const hueOf = s => { let h = 0; for (const c of String(s || 'x')) h = (h * 31 + c.charCodeAt(0)) % 360; return h; };
+
+/* ---------- Íconos (SVG en línea) ---------- */
+const ICONS = {
+  home: '<path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/>',
+  box: '<path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/>',
+  cart: '<circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.7 12.4a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.8L20 7H6"/>',
+  chart: '<path d="M4 20V11M10 20V4M16 20v-7M22 20H2"/>',
+  settings: '<path d="M4 6h9M17 6h3M4 12h3M11 12h9M4 18h11M19 18h1"/><circle cx="15" cy="6" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="17" cy="18" r="2"/>',
+  plus: '<path d="M12 5v14M5 12h14"/>',
+  minus: '<path d="M5 12h14"/>',
+  trash: '<path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/>',
+  edit: '<path d="M4 20h4L19 9l-4-4L4 16z"/><path d="m13.5 6.5 4 4"/>',
+  search: '<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>',
+  download: '<path d="M12 4v11m0 0-4-4m4 4 4-4M5 20h14"/>',
+  upload: '<path d="M12 16V5m0 0L8 9m4-4 4 4M5 20h14"/>',
+  pdf: '<path d="M14 3H7a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V7z"/><path d="M14 3v4h4M9 13h6M9 17h6"/>',
+  image: '<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="1.5"/><path d="m21 16-5-5-8 9"/>',
+  print: '<path d="M7 9V3h10v6M7 17H4a1 1 0 0 1-1-1v-5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v5a1 1 0 0 1-1 1h-3"/><rect x="7" y="14" width="10" height="7"/>',
+  share: '<circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="m8.2 10.8 7.6-3.6M8.2 13.2l7.6 3.6"/>',
+  x: '<path d="M6 6l12 12M18 6 6 18"/>',
+  check: '<path d="m5 12.5 4.5 4.5L19 7.5"/>',
+  alert: '<path d="M12 3 2 20h20z"/><path d="M12 10v4M12 17.5v.01"/>',
+  refresh: '<path d="M20 11a8 8 0 0 0-14-4L4 9M4 4v5h5M4 13a8 8 0 0 0 14 4l2-2M20 20v-5h-5"/>',
+  save: '<path d="M5 3h11l4 4v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M8 3v5h7V3M8 21v-7h8v7"/>',
+  receipt: '<path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/>',
+  eye: '<path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',
+  tag: '<path d="M3 12V4a1 1 0 0 1 1-1h8l9 9-9 9z"/><circle cx="8" cy="8" r="1.5"/>',
+  folder: '<path d="M3 6a1 1 0 0 1 1-1h5l2 2h8a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/>',
+  chevL: '<path d="m15 5-7 7 7 7"/>',
+  chevR: '<path d="m9 5 7 7-7 7"/>',
+  calendar: '<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>',
+  dollar: '<path d="M12 3v18M16.5 7.5C16 6 14.5 5 12 5c-2.5 0-4 1.1-4 3s1.5 2.7 4 3.2 4 1.3 4 3.3-1.6 3.5-4 3.5c-2.5 0-4.1-1-4.5-2.5"/>',
+  cash: '<rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/>',
+  sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>',
+  moon: '<path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/>'
+};
+const icon = (n, cls = '') => `<svg class="ic ${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[n] || ''}</svg>`;
+
+/* ---------- Avisos ---------- */
+function toast(msg, type = 'ok') {
+  const c = $('#toasts'); if (!c) return;
+  const t = document.createElement('div');
+  t.className = 'toast ' + type;
+  t.innerHTML = `${icon(type === 'err' ? 'alert' : 'check')}<span>${esc(msg)}</span>`;
+  c.appendChild(t);
+  setTimeout(() => { t.classList.add('out'); setTimeout(() => t.remove(), 280); }, type === 'err' ? 3600 : 2600);
+}
+
+/* ---------- Modales ---------- */
+function openModal({ title = '', html = '', footer = '', wide = false, onClose = null, onMount = null }) {
+  const wrap = document.createElement('div');
+  wrap.className = 'modal-wrap';
+  wrap.innerHTML = `
+    <div class="modal ${wide ? 'wide' : ''}" role="dialog" aria-modal="true" aria-label="${esc(title)}">
+      <div class="modal-head"><h3>${esc(title)}</h3><button class="icon-btn" data-modal-close aria-label="Cerrar">${icon('x')}</button></div>
+      <div class="modal-body">${html}</div>
+      ${footer ? `<div class="modal-foot">${footer}</div>` : ''}
+    </div>`;
+  document.body.appendChild(wrap);
+  document.body.classList.add('no-scroll');
+  requestAnimationFrame(() => wrap.classList.add('open'));
+  let closed = false;
+  const api = {
+    el: wrap,
+    body: $('.modal-body', wrap),
+    close() {
+      if (closed) return; closed = true;
+      wrap.classList.remove('open');
+      setTimeout(() => { wrap.remove(); if (!$('.modal-wrap')) document.body.classList.remove('no-scroll'); }, 190);
+      if (onClose) onClose();
+    }
+  };
+  wrap.addEventListener('mousedown', e => { wrap._down = e.target === wrap; });
+  wrap.addEventListener('click', e => {
+    if ((e.target === wrap && wrap._down) || e.target.closest('[data-modal-close]')) api.close();
+  });
+  const first = $('[autofocus]', wrap) || null;
+  if (first) setTimeout(() => { first.focus(); if (first.select) first.select(); }, 60);
+  if (onMount) onMount(api);
+  return api;
+}
+const closeTopModal = () => { const all = $$('.modal-wrap'); const m = all[all.length - 1]; if (m) $('[data-modal-close]', m).click(); };
+
+function confirmDialog({ title = '¿Confirmar?', msg = '', ok = 'Aceptar', cancel = 'Cancelar', danger = false }) {
+  return new Promise(res => {
+    let done = false;
+    const m = openModal({
+      title, html: `<p class="muted-p">${msg}</p>`,
+      footer: `<button class="btn" data-modal-close>${esc(cancel)}</button><button class="btn ${danger ? 'btn-danger' : 'btn-primary'}" data-confirm-ok>${esc(ok)}</button>`,
+      onClose: () => { if (!done) { done = true; res(false); } }
+    });
+    $('[data-confirm-ok]', m.el).addEventListener('click', () => { done = true; res(true); m.close(); });
+  });
+}
+
+/* ---------- Descargas ---------- */
+function downloadBlob(blob, name) {
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = name; document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 4000);
+}
+async function shareOrDownload(blob, name, title) {
+  try {
+    const file = new File([blob], name, { type: blob.type });
+    if (navigator.canShare && navigator.canShare({ files: [file] })) {
+      await navigator.share({ files: [file], title });
+      return;
+    }
+  } catch (e) { if (e && e.name === 'AbortError') return; }
+  downloadBlob(blob, name);
+  toast('Archivo guardado en Descargas');
+}
+function csvDownload(nombre, filas) {
+  const txt = '\ufeff' + filas.map(r => r.map(c => {
+    c = String(c ?? '');
+    return /[;"\n\r]/.test(c) ? '"' + c.replace(/"/g, '""') + '"' : c;
+  }).join(';')).join('\r\n');
+  downloadBlob(new Blob([txt], { type: 'text/csv;charset=utf-8' }), nombre);
+}
+const numES = n => String(Number(n)).replace('.', ',');
+
+/* ---------- Cálculos de dinero e inventario ---------- */
+const Calc = {
+  hasTasa: () => Number(S.db.config.tasa) > 0,
+  toBs: (u, t) => round2(u * (t ?? S.db.config.tasa)),
+  totales(items, descPct, impPct) {
+    const subtotal = round2(items.reduce((s, i) => s + i.subtotal, 0));
+    const descuento = round2(subtotal * (descPct || 0) / 100);
+    const base = subtotal - descuento;
+    const impuesto = round2(base * (impPct || 0) / 100);
+    return { subtotal, descuento, impuesto, total: round2(base + impuesto) };
+  },
+  minimo: p => (p.minimo ?? S.db.config.stockMinimo),
+  margen: p => (p.costo > 0 ? (p.precio / p.costo - 1) * 100 : null),   // % de ganancia sobre el costo
+  agotado: p => p.stock <= 0,
+  stockBajo: p => p.stock > 0 && p.stock < Calc.minimo(p),
+  validas: () => S.db.ventas.filter(v => !v.anulada),
+  enRango(from, to) {
+    return Calc.validas().filter(v => { const d = new Date(v.fecha); return d >= from && d < to; });
+  },
+  sum: (arr, k) => round2(arr.reduce((s, x) => s + (Number(x[k]) || 0), 0)),
+  prod: id => S.db.productos.find(p => p.id === id)
+};
+
+/* ---------- Gráfico de barras sencillo ---------- */
+function barChart(data, { height = 130 } = {}) {
+  const max = Math.max(...data.map(d => d.value), 0.0001);
+  const every = data.length > 14 ? 5 : 1;
+  return `<div class="bars" style="--bh:${height}px">${data.map((d, i) => {
+    const pct = d.value > 0 ? Math.max(d.value / max * 100, 4) : 0;
+    const showVal = data.length <= 8 && d.value > 0;
+    const lab = (i % every === 0 || i === data.length - 1) ? esc(d.label) : '';
+    return `<div class="bar-col" title="${esc(d.title || '')}">
+      <div class="bar-val">${showVal ? '$' + fmtNum(d.value, d.value >= 100 ? 0 : 2) : ''}</div>
+      <div class="bar-track"><div class="bar-fill ${d.hl ? 'hl' : ''}" style="height:${pct}%"></div></div>
+      <div class="bar-lab">${lab}</div></div>`;
+  }).join('')}</div>`;
+}
+
+/* ---------- Delegación global de eventos ---------- */
+document.addEventListener('click', e => {
+  const t = e.target.closest('[data-action]');
+  if (!t || t.disabled) return;
+  const fn = Actions[t.dataset.action];
+  if (fn) fn(t, e);
+});
+document.addEventListener('input', e => {
+  const t = e.target.closest('[data-input]');
+  if (!t) return;
+  const fn = Inputs[t.dataset.input];
+  if (fn) fn(t, e);
+});
+document.addEventListener('change', e => {
+  const t = e.target.closest('[data-change]');
+  if (!t) return;
+  const fn = Changes[t.dataset.change];
+  if (fn) fn(t, e);
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') { if ($('.modal-wrap')) closeTopModal(); return; }
+  if (e.key === 'Enter' && e.target.matches('input:not([type=checkbox]):not([type=color]):not([type=file])')) {
+    const m = e.target.closest('.modal');
+    const b = m && $('[data-submit]', m);
+    if (b) { e.preventDefault(); b.click(); }
+  }
+});
+
+
+/* =====================================================================
+   storage.js — Persistencia de la base de datos.
+
+   MODO ARCHIVO (Chrome / Edge en PC): el sistema abre un archivo .json
+   real del equipo y lo sobrescribe después de cada cambio. No depende
+   del caché del navegador.
+
+   MODO COMPATIBLE (teléfonos, Safari, Firefox): los navegadores no dejan
+   sobrescribir un archivo solos, así que se guarda una copia interna y el
+   usuario guarda el archivo .json con el botón "Guardar respaldo"
+   (queda en Descargas / Documentos) y lo vuelve a abrir cuando quiera.
+   ===================================================================== */
+
+function defaultDB() {
+  return {
+    app: 'bodega-pos',
+    version: 1,
+    creado: new Date().toISOString(),
+    config: {
+      negocio: 'Mi Bodega', rif: '', telefono: '', direccion: '', logo: '',
+      color: '#0f766e', tema: 'auto',
+      tasa: 0, tasaFecha: '',
+      impuestoActivo: false, impuestoNombre: 'IVA', impuestoPct: 16, impuestoPorDefecto: false,
+      stockMinimo: 5,
+      vueltoActivo: false,
+      mostrarValorInventario: true,
+      costoActivo: false, margenDefecto: 30,
+      pie: '¡Gracias por su compra!',
+      ticketTitulo: 'TICKET DE VENTA',
+      ultimoRespaldo: ''
+    },
+    categorias: ['Frutas y verduras', 'Carnes', 'Lácteos', 'Víveres', 'Bebidas', 'Limpieza', 'Otros'],
+    productos: [],
+    ventas: [],
+    movimientos: [],
+    contadorVentas: 0
+  };
+}
+
+function normalizeDB(d) {
+  const base = defaultDB();
+  if (!d || typeof d !== 'object') return base;
+  const out = { ...base, ...d };
+  out.config = { ...base.config, ...(d.config || {}) };
+  ['categorias', 'productos', 'ventas', 'movimientos'].forEach(k => { if (!Array.isArray(out[k])) out[k] = base[k]; });
+  if (!out.contadorVentas) out.contadorVentas = out.ventas.length;
+  return out;
+}
+
+const Storage = (() => {
+  const STORE = 'kv';
+  const FILE_TYPES = [{ description: 'Datos de la bodega (.json)', accept: { 'application/json': ['.json'] } }];
+  const supportsFile = typeof window.showOpenFilePicker === 'function' && typeof window.showSaveFilePicker === 'function';
+  let handle = null;
+  let mode = supportsFile ? 'file' : 'compat';
+  let status = 'idle';            // idle | saving | saved | error
+  let timer = null, writing = false, pending = false;
+  const listeners = [];
+
+  /* --- IndexedDB mínima (guarda el "puntero" al archivo y una copia interna) --- */
+  const idb = () => new Promise((res, rej) => {
+    const r = indexedDB.open('bodega-sistema', 1);
+    r.onupgradeneeded = () => r.result.createObjectStore(STORE);
+    r.onsuccess = () => res(r.result);
+    r.onerror = () => rej(r.error);
+  });
+  async function kvGet(k) {
+    try {
+      const d = await idb();
+      return await new Promise((res, rej) => { const q = d.transaction(STORE).objectStore(STORE).get(k); q.onsuccess = () => res(q.result); q.onerror = () => rej(q.error); });
+    } catch (e) { return undefined; }
+  }
+  async function kvSet(k, v) {
+    try {
+      const d = await idb();
+      await new Promise((res, rej) => { const t = d.transaction(STORE, 'readwrite'); t.objectStore(STORE).put(v, k); t.oncomplete = res; t.onerror = () => rej(t.error); });
+    } catch (e) { /* sin IndexedDB: se ignora */ }
+  }
+
+  const setStatus = s => { status = s; listeners.forEach(f => f(s)); };
+
+  async function readHandle(h) {
+    const file = await h.getFile();
+    const text = await file.text();
+    if (!text.trim()) return defaultDB();
+    return normalizeDB(JSON.parse(text));
+  }
+  async function writeHandle() {
+    const w = await handle.createWritable();
+    await w.write(JSON.stringify(S.db, null, 2));
+    await w.close();
+  }
+
+  async function flush() {
+    if (writing) { pending = true; return; }
+    writing = true;
+    try {
+      await kvSet('db', S.db);                      // copia interna de seguridad
+      if (handle && mode === 'file') await writeHandle();
+      setStatus('saved');
+    } catch (e) {
+      console.error('Error al guardar', e);
+      setStatus('error');
+      toast('No se pudo guardar en el archivo. Revisa los permisos.', 'err');
+    }
+    writing = false;
+    if (pending) { pending = false; flush(); }
+  }
+
+  return {
+    get mode() { return mode; },
+    get supportsFile() { return supportsFile; },
+    get fileName() { return handle ? handle.name : ''; },
+    get hasHandle() { return !!handle; },
+    get status() { return status; },
+    onStatus(f) { listeners.push(f); },
+
+    /** Intenta arrancar sin interacción. Devuelve {db} o {needsAction, ...} */
+    async start() {
+      if (supportsFile) {
+        const h = await kvGet('handle');
+        if (h) {
+          handle = h;
+          try {
+            const p = await h.queryPermission({ mode: 'readwrite' });
+            if (p === 'granted') return { db: await readHandle(h) };
+          } catch (e) { handle = null; }
+          if (handle) return { needsAction: true, fileName: handle.name };
+        }
+        return { needsAction: true };
+      }
+      const local = await kvGet('db');
+      if (local) return { db: normalizeDB(local) };
+      return { needsAction: true, first: true };
+    },
+
+    async resume() {            // pedir permiso otra vez sobre el archivo recordado
+      const p = await handle.requestPermission({ mode: 'readwrite' });
+      if (p !== 'granted') throw new Error('permiso denegado');
+      return readHandle(handle);
+    },
+    async openFile() {
+      const [h] = await window.showOpenFilePicker({ types: FILE_TYPES, multiple: false });
+      const p = await h.requestPermission({ mode: 'readwrite' });
+      if (p !== 'granted') throw new Error('permiso denegado');
+      handle = h; mode = 'file';
+      await kvSet('handle', h);
+      return readHandle(h);
+    },
+    async createFile() {
+      const h = await window.showSaveFilePicker({ suggestedName: 'bodega.json', types: FILE_TYPES });
+      handle = h; mode = 'file';
+      await kvSet('handle', h);
+      const db = defaultDB();
+      S.db = db;
+      await writeHandle();
+      return db;
+    },
+    parseText(text) { return normalizeDB(JSON.parse(text)); },
+    async useLocalOnly() {          // trabajar sin archivo (solo copia interna del navegador)
+      mode = 'compat'; handle = null;
+      const local = await kvGet('db');
+      return local ? normalizeDB(local) : defaultDB();
+    },
+
+    save() { setStatus('saving'); clearTimeout(timer); timer = setTimeout(flush, 250); },
+    async saveNow() { clearTimeout(timer); await flush(); },
+
+    exportBackup() {
+      S.db.config.ultimoRespaldo = new Date().toISOString();
+      const blob = new Blob([JSON.stringify(S.db, null, 2)], { type: 'application/json' });
+      downloadBlob(blob, `bodega_${toInputDate(new Date())}.json`);
+      this.save();
+      toast('Respaldo guardado en Descargas');
+    }
+  };
+})();
+
+window.addEventListener('beforeunload', e => {
+  if (Storage.status === 'saving') { e.preventDefault(); e.returnValue = ''; }
+});
+
+
+/* =====================================================================
+   reportes.js — Generación de PDF (sin librerías externas), ticket como
+   imagen, impresión y exportación a Excel (CSV).
+   ===================================================================== */
+
+/* ---------- Mini generador de PDF ---------- */
+const HELV = [
+  278, 278, 355, 556, 556, 889, 667, 191, 333, 333, 389, 584, 278, 333, 278, 278,
+  556, 556, 556, 556, 556, 556, 556, 556, 556, 556,
+  278, 278, 584, 584, 584, 556, 1015,
+  667, 667, 722, 722, 667, 611, 778, 722, 278, 500, 667, 556, 833, 722, 778, 667, 778, 722, 667, 611, 722, 667, 944, 667, 667, 611,
+  278, 278, 278, 469, 556, 333,
+  556, 556, 500, 556, 556, 278, 556, 556, 222, 222, 500, 222, 833, 556, 556, 556, 556, 333, 500, 278, 556, 500, 722, 500, 500, 500,
+  334, 260, 334, 584
+];
+function pdfTextWidth(str, size, bold) {
+  let w = 0;
+  for (const ch of String(str)) {
+    let c = ch.charCodeAt(0);
+    if (c > 126 || c < 32) { c = (ch.normalize('NFD')[0] || '?').charCodeAt(0); if (c > 126 || c < 32) c = 110; }
+    let cw = HELV[c - 32] || 556;
+    if (bold && !(c >= 48 && c <= 57)) cw *= 1.07;
+    w += cw;
+  }
+  return w * size / 1000;
+}
+function pdfFit(str, size, maxW, bold) {
+  str = String(str);
+  if (pdfTextWidth(str, size, bold) <= maxW) return str;
+  while (str.length > 1 && pdfTextWidth(str + '...', size, bold) > maxW) str = str.slice(0, -1);
+  return str.trimEnd() + '...';
+}
+const hex01 = h => { h = h.replace('#', ''); if (h.length === 3) h = [...h].map(c => c + c).join(''); const n = parseInt(h, 16); return [(n >> 16 & 255) / 255, (n >> 8 & 255) / 255, (n & 255) / 255]; };
+
+class MiniPDF {
+  constructor(w = 595.28, h = 841.89) { this.W = w; this.H = h; this.pages = []; this.images = []; this.cur = null; this.addPage(); }
+  addPage(h) { this.cur = { ops: [], h: h || this.H }; this.pages.push(this.cur); }
+  _y(y) { return (this.cur.h - y).toFixed(2); }
+  _clean(s) {
+    return String(s).replace(/[–—]/g, '-').replace(/[‘’]/g, "'").replace(/[“”]/g, '"').replace(/…/g, '...')
+      .replace(/[^\x00-\xff]/g, '?').replace(/\\/g, '\\\\').replace(/\(/g, '\\(').replace(/\)/g, '\\)');
+  }
+  text(str, x, y, { size = 10, bold = false, align = 'left', color = [0, 0, 0] } = {}) {
+    const w = pdfTextWidth(str, size, bold);
+    if (align === 'right') x -= w; else if (align === 'center') x -= w / 2;
+    this.cur.ops.push(`BT /${bold ? 'F2' : 'F1'} ${size} Tf ${color.map(c => c.toFixed(3)).join(' ')} rg ${x.toFixed(2)} ${this._y(y)} Td (${this._clean(str)}) Tj ET`);
+  }
+  rect(x, y, w, h, { fill = null, stroke = null, lw = 0.5 } = {}) {
+    let op = '';
+    if (fill) op += `${fill.map(c => c.toFixed(3)).join(' ')} rg `;
+    if (stroke) op += `${stroke.map(c => c.toFixed(3)).join(' ')} RG ${lw} w `;
+    op += `${x.toFixed(2)} ${(this.cur.h - y - h).toFixed(2)} ${w.toFixed(2)} ${h.toFixed(2)} re ${fill && stroke ? 'B' : fill ? 'f' : 'S'}`;
+    this.cur.ops.push(op);
+  }
+  line(x1, y1, x2, y2, { color = [.8, .8, .8], lw = 0.5 } = {}) {
+    this.cur.ops.push(`${color.map(c => c.toFixed(3)).join(' ')} RG ${lw} w ${x1.toFixed(2)} ${this._y(y1)} m ${x2.toFixed(2)} ${this._y(y2)} l S`);
+  }
+  image(img, x, y, w, h) {                       // img = { data:Uint8Array(JPEG), w, h }
+    let idx = this.images.indexOf(img);
+    if (idx < 0) { this.images.push(img); idx = this.images.length - 1; }
+    this.cur.ops.push(`q ${w.toFixed(2)} 0 0 ${h.toFixed(2)} ${x.toFixed(2)} ${(this.cur.h - y - h).toFixed(2)} cm /Im${idx} Do Q`);
+  }
+  output() {
+    const parts = []; let len = 0; const offs = [];
+    const enc = s => { const a = new Uint8Array(s.length); for (let i = 0; i < s.length; i++) a[i] = s.charCodeAt(i) & 255; return a; };
+    const push = d => { const b = typeof d === 'string' ? enc(d) : d; parts.push(b); len += b.length; };
+    const ni = this.images.length, np = this.pages.length;
+    const pageObj = k => 5 + ni + 2 * k;
+    const total = 5 + ni + 2 * np;                    // número de objetos + 1 (objeto 0)
+
+    push('%PDF-1.4\n%\xE2\xE3\xCF\xD3\n');
+    offs[1] = len; push('1 0 obj\n<< /Type /Catalog /Pages 2 0 R >>\nendobj\n');
+    offs[2] = len; push(`2 0 obj\n<< /Type /Pages /Kids [${this.pages.map((_, k) => pageObj(k) + ' 0 R').join(' ')}] /Count ${np} >>\nendobj\n`);
+    offs[3] = len; push('3 0 obj\n<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>\nendobj\n');
+    offs[4] = len; push('4 0 obj\n<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>\nendobj\n');
+    this.images.forEach((im, i) => {
+      const n = 5 + i; offs[n] = len;
+      push(`${n} 0 obj\n<< /Type /XObject /Subtype /Image /Width ${im.w} /Height ${im.h} /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length ${im.data.length} >>\nstream\n`);
+      push(im.data); push('\nendstream\nendobj\n');
+    });
+    const xobj = this.images.map((_, i) => `/Im${i} ${5 + i} 0 R`).join(' ');
+    this.pages.forEach((pg, k) => {
+      const po = pageObj(k), co = po + 1;
+      offs[po] = len;
+      push(`${po} 0 obj\n<< /Type /Page /Parent 2 0 R /MediaBox [0 0 ${this.W.toFixed(2)} ${pg.h.toFixed(2)}] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> /XObject << ${xobj} >> >> /Contents ${co} 0 R >>\nendobj\n`);
+      const content = enc(pg.ops.join('\n'));
+      offs[co] = len;
+      push(`${co} 0 obj\n<< /Length ${content.length} >>\nstream\n`); push(content); push('\nendstream\nendobj\n');
+    });
+    const xref = len;
+    let x = `xref\n0 ${total}\n0000000000 65535 f \n`;
+    for (let i = 1; i < total; i++) x += String(offs[i]).padStart(10, '0') + ' 00000 n \n';
+    push(x + `trailer\n<< /Size ${total} /Root 1 0 R >>\nstartxref\n${xref}\n%%EOF`);
+    return new Blob(parts, { type: 'application/pdf' });
+  }
+}
+
+function dataUrlToBytes(url) {
+  const b = atob(url.split(',')[1]); const a = new Uint8Array(b.length);
+  for (let i = 0; i < b.length; i++) a[i] = b.charCodeAt(i);
+  return a;
+}
+function canvasToJpegImage(canvas, q = 0.92) {
+  return { data: dataUrlToBytes(canvas.toDataURL('image/jpeg', q)), w: canvas.width, h: canvas.height };
+}
+function loadImage(src) {
+  return new Promise(res => { if (!src) return res(null); const i = new Image(); i.onload = () => res(i); i.onerror = () => res(null); i.src = src; });
+}
+
+/* ---------- Ticket (se dibuja en un canvas: sirve para imagen, PDF e impresión) ---------- */
+const Ticket = {
+  cur: null,
+
+  async canvas(v) {
+    const cfg = S.db.config, W = 440, P = 26, SC = 2;
+    const logo = await loadImage(cfg.logo);
+    const H = 900 + v.items.length * 110;
+    const tmp = document.createElement('canvas');
+    tmp.width = W * SC; tmp.height = H * SC;
+    const c = tmp.getContext('2d');
+    c.scale(SC, SC);
+    c.fillStyle = '#fff'; c.fillRect(0, 0, W, H);
+    c.textBaseline = 'top';
+    const FONT = '"Segoe UI", Roboto, Helvetica, Arial, sans-serif';
+    const F = (px, w = 400) => `${w} ${px}px ${FONT}`;
+    let y = P;
+
+    const wrap = (text, maxW) => {
+      const words = String(text).split(/\s+/); const lines = []; let cur = '';
+      for (const w of words) {
+        const t = cur ? cur + ' ' + w : w;
+        if (c.measureText(t).width <= maxW || !cur) cur = t; else { lines.push(cur); cur = w; }
+      }
+      if (cur) lines.push(cur);
+      return lines;
+    };
+    const center = (text, px, weight = 400, color = '#111', gap = 3) => {
+      c.font = F(px, weight); c.fillStyle = color; c.textAlign = 'center';
+      wrap(text, W - 2 * P).forEach(l => { c.fillText(l, W / 2, y); y += px * 1.3; });
+      y += gap;
+    };
+    const lr = (l, r, px, weight = 400, color = '#111', colorL = null) => {
+      c.font = F(px, weight);
+      c.textAlign = 'left'; c.fillStyle = colorL || color; c.fillText(l, P, y);
+      c.textAlign = 'right'; c.fillStyle = color; c.fillText(r, W - P, y);
+      y += px * 1.45;
+    };
+    const dash = () => { y += 4; c.strokeStyle = '#9aa'; c.setLineDash([5, 4]); c.lineWidth = 1; c.beginPath(); c.moveTo(P, y); c.lineTo(W - P, y); c.stroke(); c.setLineDash([]); y += 12; };
+
+    if (logo) {
+      const mh = 78, k = Math.min(mh / logo.height, 200 / logo.width), lw = logo.width * k, lh = logo.height * k;
+      c.drawImage(logo, (W - lw) / 2, y, lw, lh); y += lh + 10;
+    }
+    center(cfg.negocio || 'Mi Bodega', 26, 800, '#000', 2);
+    if (cfg.rif) center('RIF: ' + cfg.rif, 13, 400, '#444', 0);
+    if (cfg.direccion) center(cfg.direccion, 13, 400, '#444', 0);
+    if (cfg.telefono) center('Tel: ' + cfg.telefono, 13, 400, '#444', 0);
+    dash();
+
+    center(v.simulada ? 'PRESUPUESTO' : (cfg.ticketTitulo || 'TICKET DE VENTA'), 17, 800, '#000', 2);
+    if (v.simulada) center('Simulación: no descuenta inventario ni es comprobante de pago', 12, 400, '#555', 4);
+    else lr('N°', pad6(v.numero), 14, 700);
+    const f = new Date(v.fecha);
+    lr('Fecha', fmtDateTime(f), 14);
+    if (v.cliente) lr('Cliente', v.cliente, 14);
+    if (v.pago && !v.simulada) {
+      lr('Pago', v.pagoDetalle ? 'Otro' : v.pago, 14);
+      if (v.pagoDetalle) {
+        c.font = F(13.5); c.fillStyle = '#222'; c.textAlign = 'left';
+        wrap(v.pagoDetalle, W - 2 * P).forEach(l => { c.fillText(l, P, y); y += 19; });
+        y += 2;
+      }
+    }
+    dash();
+
+    v.items.forEach(it => {
+      c.font = F(15, 700); c.fillStyle = '#000'; c.textAlign = 'left';
+      wrap(nombreCompleto(it), W - 2 * P).forEach(l => { c.fillText(l, P, y); y += 20; });
+      const q = `${fmtQty(it.cantShow ?? it.cant)} ${uShort(it.ud || it.unidad)} × ${usd(it.precio)}/${uShort(it.unidad)}`;
+      lr(q, usd(it.subtotal), 13.5, 600, '#000', '#555');
+      y += 5;
+    });
+    dash();
+
+    lr('Subtotal', usd(v.subtotal), 15, 500);
+    if (v.descuento > 0) lr(`Descuento (${fmtNum(v.descPct, v.descPct % 1 ? 2 : 0)}%)`, '-' + usd(v.descuento), 15, 500);
+    if (v.impuesto > 0) lr(`${v.impNombre || 'Impuesto'} (${fmtNum(v.impPct, v.impPct % 1 ? 2 : 0)}%)`, usd(v.impuesto), 15, 500);
+    y += 6;
+    lr('TOTAL USD', usd(v.total), 24, 800);
+    if (v.tasa > 0) {
+      lr('TOTAL Bs', bs(v.totalBs), 24, 800);
+      c.font = F(12.5); c.fillStyle = '#555'; c.textAlign = 'right';
+      c.fillText(`Tasa: 1 USD = ${bs(v.tasa)}`, W - P, y); y += 20;
+    }
+    if (v.recibido > 0) {
+      y += 6;
+      lr('Recibido', fmtM(v.recMoneda, v.recibido), 15, 500);
+      lr('VUELTO', fmtM(v.recMoneda, v.vuelto), 19, 800);
+    }
+    dash();
+    if (cfg.pie) center(cfg.pie, 14, 500, '#222', 8);
+    center('Comprobante de venta · Documento no fiscal', 11.5, 400, '#666', 0);
+    y += P;
+
+    const h = Math.ceil(y);
+    const out = document.createElement('canvas');
+    out.width = W * SC; out.height = h * SC;
+    out.getContext('2d').drawImage(tmp, 0, 0, W * SC, h * SC, 0, 0, W * SC, h * SC);
+    return out;
+  },
+
+  fileBase(v) { return (v.simulada ? 'Presupuesto' : 'Ticket-' + pad6(v.numero)) + '_' + toInputDate(new Date(v.fecha)); },
+
+  async openModal(v, { title = 'Ticket', exito = false } = {}) {
+    const canvas = await Ticket.canvas(v);
+    Ticket.cur = { v, canvas };
+    const url = canvas.toDataURL('image/png');
+    openModal({
+      title,
+      html: `${exito ? `<p class="muted-p" style="margin-bottom:12px">La venta se guardó y se descontó del inventario.</p>` : ''}
+             <div class="ticket-wrap"><img class="ticket-img" src="${url}" alt="Ticket"></div>`,
+      footer: `<div class="btn-row">
+          <button class="btn" data-action="tk-pdf">${icon('pdf')}PDF</button>
+          <button class="btn" data-action="tk-img">${icon('image')}Imagen</button>
+          <button class="btn" data-action="tk-print">${icon('print')}Imprimir</button>
+          <button class="btn" data-action="tk-share">${icon('share')}Enviar</button>
+        </div>
+        ${exito ? `<button class="btn btn-primary btn-block" data-modal-close>Nueva venta</button>` : ''}`
+    });
+  },
+
+  pdfBlob() {
+    const { canvas } = Ticket.cur;
+    const w = 226.77, h = w * canvas.height / canvas.width;
+    const doc = new MiniPDF(w, h);
+    doc.image(canvasToJpegImage(canvas), 0, 0, w, h);
+    return doc.output();
+  },
+  imgBlob() { return new Promise(res => Ticket.cur.canvas.toBlob(res, 'image/png')); },
+  print() {
+    const area = $('#print-area');
+    const img = new Image();
+    img.className = 'print-ticket';
+    area.innerHTML = '';
+    area.appendChild(img);
+    $('#page-style').textContent = '@page { size: 80mm auto; margin: 0 }';
+    img.onload = () => setTimeout(() => window.print(), 50);
+    img.src = Ticket.cur.canvas.toDataURL('image/png');
+  }
+};
+window.addEventListener('afterprint', () => { $('#print-area').innerHTML = ''; $('#page-style').textContent = ''; });
+
+Actions['tk-pdf'] = () => downloadBlob(Ticket.pdfBlob(), Ticket.fileBase(Ticket.cur.v) + '.pdf');
+Actions['tk-img'] = async () => downloadBlob(await Ticket.imgBlob(), Ticket.fileBase(Ticket.cur.v) + '.png');
+Actions['tk-print'] = () => Ticket.print();
+Actions['tk-share'] = async () => shareOrDownload(await Ticket.imgBlob(), Ticket.fileBase(Ticket.cur.v) + '.png', 'Ticket de venta');
+
+/* ---------- Reportes en PDF (tabla A4) ---------- */
+async function buildTablePDF({ titulo, subtitulo = '', cols, rows, resumen = [] }) {
+  const cfg = S.db.config;
+  const doc = new MiniPDF();
+  const M = 36, CW = doc.W - 2 * M, ROW = 19;
+  const brand = hex01(cfg.color || '#0f766e');
+  const onBrand = [1, 1, 1];
+  const grey = [.42, .45, .5];
+  const logoImg = await loadImage(cfg.logo);
+  const logo = logoImg ? (() => {
+    const k = 120 / Math.max(logoImg.width, logoImg.height);
+    const cv = document.createElement('canvas'); cv.width = Math.round(logoImg.width * k); cv.height = Math.round(logoImg.height * k);
+    const g = cv.getContext('2d'); g.fillStyle = '#fff'; g.fillRect(0, 0, cv.width, cv.height); g.drawImage(logoImg, 0, 0, cv.width, cv.height);
+    return canvasToJpegImage(cv, 0.9);
+  })() : null;
+  const totalW = cols.reduce((s, c) => s + c.w, 0);
+  const widths = cols.map(c => c.w / totalW * CW);
+  let y;
+
+  const tableHead = () => {
+    doc.rect(M, y, CW, ROW + 2, { fill: brand });
+    let x = M;
+    cols.forEach((c, i) => {
+      const tx = c.align === 'right' ? x + widths[i] - 6 : x + 6;
+      doc.text(c.title, tx, y + 13.5, { size: 8.5, bold: true, color: onBrand, align: c.align === 'right' ? 'right' : 'left' });
+      x += widths[i];
+    });
+    y += ROW + 2;
+  };
+  const header = first => {
+    y = M;
+    if (first) {
+      let x = M;
+      if (logo) {
+        const k = 44 / Math.max(logo.w, logo.h);
+        doc.image(logo, M, y, logo.w * k, logo.h * k);
+        x += logo.w * k + 12;
+      }
+      doc.text(cfg.negocio || 'Mi Bodega', x, y + 17, { size: 19, bold: true });
+      doc.text(titulo, x, y + 33, { size: 11, color: grey });
+      doc.text('Generado: ' + fmtDateTime(new Date()), doc.W - M, y + 14, { size: 8.5, color: grey, align: 'right' });
+      if (subtitulo) doc.text(subtitulo, doc.W - M, y + 26, { size: 8.5, color: grey, align: 'right' });
+      if (Calc.hasTasa()) doc.text(`Tasa: 1 USD = ${bs(cfg.tasa)}`, doc.W - M, y + 38, { size: 8.5, color: grey, align: 'right' });
+      y += 62;
+    } else {
+      doc.text(`${cfg.negocio || ''} · ${titulo}`, M, y + 8, { size: 8.5, color: grey });
+      y += 22;
+    }
+    tableHead();
+  };
+
+  header(true);
+  rows.forEach((r, ri) => {
+    if (y + ROW > doc.H - M - 28) { doc.addPage(); header(false); }
+    if (ri % 2 === 1) doc.rect(M, y, CW, ROW, { fill: [.96, .97, .98] });
+    let x = M;
+    cols.forEach((c, i) => {
+      const raw = c.get(r);
+      const bold = !!c.bold;
+      const col = c.color ? (c.color(r) || [0.07, 0.09, 0.13]) : [0.07, 0.09, 0.13];
+      const txt = pdfFit(raw, 8.5, widths[i] - 12, bold);
+      doc.text(txt, c.align === 'right' ? x + widths[i] - 6 : x + 6, y + 13, { size: 8.5, bold, color: col, align: c.align === 'right' ? 'right' : 'left' });
+      x += widths[i];
+    });
+    doc.line(M, y + ROW, M + CW, y + ROW, { color: [.9, .91, .93], lw: .4 });
+    y += ROW;
+  });
+  if (!rows.length) doc.text('Sin registros para mostrar.', M + 6, y + 18, { size: 10, color: grey });
+
+  if (resumen.length) {
+    const bh = 12 + resumen.length * 16 + 8;
+    if (y + bh + 14 > doc.H - M - 20) { doc.addPage(); y = M; }
+    y += 14;
+    const bw = 230, bx = doc.W - M - bw;
+    doc.rect(bx, y, bw, bh, { fill: [.96, .97, .98], stroke: [.88, .9, .92] });
+    resumen.forEach((r, i) => {
+      const last = i === resumen.length - 1;
+      doc.text(r[0], bx + 12, y + 20 + i * 16, { size: last ? 10 : 9, bold: last, color: last ? [0, 0, 0] : grey });
+      doc.text(r[1], bx + bw - 12, y + 20 + i * 16, { size: last ? 10 : 9, bold: true, align: 'right' });
+    });
+  }
+  const n = doc.pages.length;
+  doc.pages.forEach((p, i) => { doc.cur = p; doc.text(`Página ${i + 1} de ${n}`, doc.W / 2, doc.H - 20, { size: 8, color: grey, align: 'center' }); });
+  return doc.output();
+}
+
+/* ---------- Excel real (.xlsx) con bordes, sin librerías ---------- */
+const CRC_T = (() => { const t = []; for (let n = 0; n < 256; n++) { let c = n; for (let k = 0; k < 8; k++) c = c & 1 ? 0xEDB88320 ^ (c >>> 1) : c >>> 1; t[n] = c >>> 0; } return t; })();
+const crc32 = b => { let c = 0xFFFFFFFF; for (let i = 0; i < b.length; i++) c = CRC_T[(c ^ b[i]) & 255] ^ (c >>> 8); return (c ^ 0xFFFFFFFF) >>> 0; };
+
+function zipStore(files) {                       // files: [{name, data(string)}]  (sin compresión)
+  const te = new TextEncoder(), parts = [], central = []; let off = 0;
+  files.forEach(f => {
+    const name = te.encode(f.name), data = te.encode(f.data), crc = crc32(data);
+    const lh = new DataView(new ArrayBuffer(30));
+    lh.setUint32(0, 0x04034b50, true); lh.setUint16(4, 20, true); lh.setUint16(6, 0x0800, true); lh.setUint16(8, 0, true);
+    lh.setUint16(10, 0, true); lh.setUint16(12, 0x21, true); lh.setUint32(14, crc, true);
+    lh.setUint32(18, data.length, true); lh.setUint32(22, data.length, true); lh.setUint16(26, name.length, true); lh.setUint16(28, 0, true);
+    parts.push(new Uint8Array(lh.buffer), name, data);
+    const ch = new DataView(new ArrayBuffer(46));
+    ch.setUint32(0, 0x02014b50, true); ch.setUint16(4, 20, true); ch.setUint16(6, 20, true); ch.setUint16(8, 0x0800, true);
+    ch.setUint16(10, 0, true); ch.setUint16(12, 0, true); ch.setUint16(14, 0x21, true); ch.setUint32(16, crc, true);
+    ch.setUint32(20, data.length, true); ch.setUint32(24, data.length, true); ch.setUint16(28, name.length, true);
+    ch.setUint32(42, off, true);
+    central.push(new Uint8Array(ch.buffer), name);
+    off += 30 + name.length + data.length;
+  });
+  const cdSize = central.reduce((s, p) => s + p.length, 0);
+  const end = new DataView(new ArrayBuffer(22));
+  end.setUint32(0, 0x06054b50, true); end.setUint16(8, files.length, true); end.setUint16(10, files.length, true);
+  end.setUint32(12, cdSize, true); end.setUint32(16, off, true);
+  return new Blob([...parts, ...central, new Uint8Array(end.buffer)], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+}
+
+/** cols: [{title, w, tipo:'texto'|'dinero'|'cant'}]  rows: [[valores]]  total: fila opcional (array, null = vacío) */
+function xlsxBlob({ hoja, cols, rows, total }) {
+  const X = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])).replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F]/g, '');
+  const L = i => { let s = ''; for (i++; i > 0; i = Math.floor((i - 1) / 26)) s = String.fromCharCode(65 + (i - 1) % 26) + s; return s; };
+  const brand = (S.db.config.color || '#0f766e').replace('#', '').toUpperCase();
+  const [r, g, b] = hex01('#' + brand); const claro = (0.2126 * r + 0.7152 * g + 0.0722 * b) > 0.6;
+  // estilos: 0 normal | 1 encabezado | 2 texto | 3 dinero | 4 cantidad | 5 total texto | 6 total dinero
+  const styleOf = t => t === 'dinero' ? 3 : t === 'cant' ? 4 : 2;
+  const cell = (v, ref, s) => (v === null || v === undefined || v === '')
+    ? `<c r="${ref}" s="${s}"/>`
+    : (typeof v === 'number' ? `<c r="${ref}" s="${s}"><v>${v}</v></c>` : `<c r="${ref}" s="${s}" t="inlineStr"><is><t xml:space="preserve">${X(v)}</t></is></c>`);
+  let n = 1;
+  let sheetRows = `<row r="1" ht="24" customHeight="1">${cols.map((c, i) => cell(c.title, L(i) + 1, 1)).join('')}</row>`;
+  rows.forEach(rw => { n++; sheetRows += `<row r="${n}">${cols.map((c, i) => cell(rw[i], L(i) + n, styleOf(c.tipo))).join('')}</row>`; });
+  if (total) { n++; sheetRows += `<row r="${n}">${cols.map((c, i) => cell(total[i], L(i) + n, c.tipo === 'dinero' ? 6 : 5)).join('')}</row>`; }
+  const sheet = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><sheetViews><sheetView workbookViewId="0"><pane ySplit="1" topLeftCell="A2" activePane="bottomLeft" state="frozen"/></sheetView></sheetViews><cols>${cols.map((c, i) => `<col min="${i + 1}" max="${i + 1}" width="${c.w}" customWidth="1"/>`).join('')}</cols><sheetData>${sheetRows}</sheetData></worksheet>`;
+  const border = '<border><left style="thin"><color rgb="FF8A8F98"/></left><right style="thin"><color rgb="FF8A8F98"/></right><top style="thin"><color rgb="FF8A8F98"/></top><bottom style="thin"><color rgb="FF8A8F98"/></bottom><diagonal/></border>';
+  const styles = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><styleSheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><numFmts count="1"><numFmt numFmtId="164" formatCode="#,##0.00"/></numFmts><fonts count="3"><font><sz val="11"/><name val="Calibri"/></font><font><b/><sz val="11"/><color rgb="${claro ? 'FF111111' : 'FFFFFFFF'}"/><name val="Calibri"/></font><font><b/><sz val="11"/><name val="Calibri"/></font></fonts><fills count="4"><fill><patternFill patternType="none"/></fill><fill><patternFill patternType="gray125"/></fill><fill><patternFill patternType="solid"><fgColor rgb="FF${brand}"/><bgColor indexed="64"/></patternFill></fill><fill><patternFill patternType="solid"><fgColor rgb="FFEEF1F4"/><bgColor indexed="64"/></patternFill></fill></fills><borders count="2"><border><left/><right/><top/><bottom/><diagonal/></border>${border}</borders><cellStyleXfs count="1"><xf numFmtId="0" fontId="0" fillId="0" borderId="0"/></cellStyleXfs><cellXfs count="7"><xf numFmtId="0" fontId="0" fillId="0" borderId="0" xfId="0"/><xf numFmtId="0" fontId="1" fillId="2" borderId="1" xfId="0" applyFont="1" applyFill="1" applyBorder="1" applyAlignment="1"><alignment horizontal="center" vertical="center" wrapText="1"/></xf><xf numFmtId="0" fontId="0" fillId="0" borderId="1" xfId="0" applyBorder="1" applyAlignment="1"><alignment vertical="center"/></xf><xf numFmtId="164" fontId="0" fillId="0" borderId="1" xfId="0" applyNumberFormat="1" applyBorder="1"/><xf numFmtId="0" fontId="0" fillId="0" borderId="1" xfId="0" applyBorder="1" applyAlignment="1"><alignment horizontal="right"/></xf><xf numFmtId="0" fontId="2" fillId="3" borderId="1" xfId="0" applyFont="1" applyFill="1" applyBorder="1"/><xf numFmtId="164" fontId="2" fillId="3" borderId="1" xfId="0" applyNumberFormat="1" applyFont="1" applyFill="1" applyBorder="1"/></cellXfs><cellStyles count="1"><cellStyle name="Normal" xfId="0" builtinId="0"/></cellStyles></styleSheet>`;
+  const nombreHoja = X(hoja).slice(0, 30);
+  return zipStore([
+    { name: '[Content_Types].xml', data: '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/><Override PartName="/xl/worksheets/sheet1.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/><Override PartName="/xl/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml"/></Types>' },
+    { name: '_rels/.rels', data: '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/></Relationships>' },
+    { name: 'xl/workbook.xml', data: `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><sheets><sheet name="${nombreHoja}" sheetId="1" r:id="rId1"/></sheets></workbook>` },
+    { name: 'xl/_rels/workbook.xml.rels', data: '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet1.xml"/><Relationship Id="rId2" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/></Relationships>' },
+    { name: 'xl/styles.xml', data: styles },
+    { name: 'xl/worksheets/sheet1.xml', data: sheet }
+  ]);
+}
+
+const Reportes = {
+  inventarioRows() {
+    return [...S.db.productos].sort((a, b) => nombreCompleto(a).localeCompare(nombreCompleto(b), 'es'));
+  },
+  async inventarioPDF() {
+    const rows = Reportes.inventarioRows();
+    const tasa = Calc.hasTasa();
+    const valor = round2(rows.reduce((s, p) => s + p.stock * p.precio, 0));
+    const conCosto = S.db.config.costoActivo;
+    const cols = [
+      { title: 'PRODUCTO', w: conCosto ? 28 : 34, get: p => nombreCompleto(p), bold: true },
+      { title: 'CATEGORÍA', w: conCosto ? 14 : 17, get: p => p.categoria || '-' },
+      { title: 'STOCK', w: 14, align: 'right', get: p => `${fmtQty(p.stock)} ${uShort(p.unidad)}`, color: p => Calc.agotado(p) ? [.85, .18, .13] : Calc.stockBajo(p) ? [.71, .28, .03] : null },
+      ...(conCosto ? [{ title: 'COSTO USD', w: 11, align: 'right', get: p => p.costo > 0 ? usd(p.costo) : '-' }] : []),
+      { title: 'PRECIO USD', w: 12, align: 'right', get: p => usd(p.precio) },
+      { title: tasa ? 'PRECIO Bs' : '', w: 12, align: 'right', get: p => tasa ? bs(Calc.toBs(p.precio)) : '' },
+      { title: 'VALOR USD', w: 12, align: 'right', get: p => usd(p.stock * p.precio) }
+    ];
+    const resumen = [['Productos registrados', String(rows.length)], ['Valor del inventario (USD)', usd(valor)]];
+    if (tasa) resumen.push(['Valor del inventario (Bs)', bs(Calc.toBs(valor))]);
+    const blob = await buildTablePDF({ titulo: 'Inventario de productos', cols, rows, resumen });
+    downloadBlob(blob, `Inventario_${toInputDate(new Date())}.pdf`);
+    toast('PDF guardado en Descargas');
+  },
+  inventarioExcel() {
+    const tasa = Calc.hasTasa(), rows = Reportes.inventarioRows(), conCosto = S.db.config.costoActivo;
+    const tot = round2(rows.reduce((s, p) => s + p.stock * p.precio, 0));
+    const totCosto = round2(rows.reduce((s, p) => s + (p.costo > 0 ? p.stock * p.costo : 0), 0));
+    const cols = [
+      { title: 'Producto', w: 28, get: p => p.nombre },
+      { title: 'Presentación', w: 16, get: p => p.presentacion || '' },
+      { title: 'Categoría', w: 18, get: p => p.categoria || '' },
+      { title: 'Código', w: 12, get: p => p.sku || '' },
+      { title: 'Unidad', w: 9, get: p => uShort(p.unidad) },
+      { title: 'Stock', w: 11, tipo: 'cant', get: p => rq(p.stock) },
+      { title: 'Stock mínimo', w: 13, tipo: 'cant', get: p => rq(Calc.minimo(p)) },
+      ...(conCosto ? [
+        { title: 'Costo USD', w: 12, tipo: 'dinero', get: p => p.costo > 0 ? p.costo : null },
+        { title: '% Ganancia', w: 12, tipo: 'dinero', get: p => p.costo > 0 ? round2(Calc.margen(p)) : null }
+      ] : []),
+      { title: 'Precio USD', w: 12, tipo: 'dinero', get: p => p.precio },
+      { title: 'Precio Bs', w: 14, tipo: 'dinero', get: p => tasa ? Calc.toBs(p.precio) : null },
+      ...(conCosto ? [{ title: 'Invertido USD (costo)', w: 20, tipo: 'dinero', get: p => p.costo > 0 ? round2(p.stock * p.costo) : null, total: () => totCosto }] : []),
+      { title: 'Valor USD (venta)', w: 17, tipo: 'dinero', get: p => round2(p.stock * p.precio), total: () => tot },
+      { title: 'Valor Bs (venta)', w: 17, tipo: 'dinero', get: p => tasa ? Calc.toBs(p.stock * p.precio) : null, total: () => tasa ? Calc.toBs(tot) : null }
+    ];
+    const data = rows.map(p => cols.map(c => c.get(p)));
+    const total = cols.map((c, i) => c.total ? c.total() : (i === 0 ? 'TOTAL' : null));
+    downloadBlob(xlsxBlob({ hoja: 'Inventario', cols, rows: data, total }), `Inventario_${toInputDate(new Date())}.xlsx`);
+    toast('Excel guardado en Descargas');
+  },
+  detalleVenta: v => v.items.map(i => `${fmtQty(i.cantShow ?? i.cant)} ${uShort(i.ud || i.unidad)} ${nombreCompleto(i)}`).join(', '),
+  async ventasPDF(ventas, etiqueta) {
+    const ok = ventas.filter(v => !v.anulada).sort((a, b) => new Date(a.fecha) - new Date(b.fecha));
+    const tasa = ok.some(v => v.tasa > 0);
+    const hayGan = ok.some(v => v.ganancia != null);
+    const hayDesc = ok.some(v => v.descuento > 0);
+    const cols = [
+      { title: 'N°', w: 7, get: v => pad6(v.numero || 0).slice(-4), bold: true },
+      { title: 'FECHA', w: 16, get: v => fmtDateTime(new Date(v.fecha)) },
+      { title: 'DETALLE', w: 40, get: v => Reportes.detalleVenta(v) },
+      { title: 'PAGO', w: 11, get: v => pagoTxt(v) },
+      ...(hayDesc ? [{ title: 'DESC.', w: 9, align: 'right', get: v => v.descuento > 0 ? '-' + usd(v.descuento) : '-' }] : []),
+      { title: 'TOTAL USD', w: 12, align: 'right', get: v => usd(v.total), bold: true },
+      { title: tasa ? 'TOTAL Bs' : '', w: 13, align: 'right', get: v => v.tasa > 0 ? bs(v.totalBs) : '' },
+      ...(hayGan ? [{ title: 'GANANCIA', w: 11, align: 'right', get: v => v.ganancia != null ? usd(v.ganancia) : '-' }] : [])
+    ];
+    cols[2].w = 40 - (hayGan ? 10 : 0) - (hayDesc ? 9 : 0);
+    const tUsd = Calc.sum(ok, 'total');
+    const resumen = [['Cantidad de ventas', String(ok.length)]];
+    const desc = Calc.sum(ok, 'descuento'); if (desc > 0) resumen.push(['Descuentos otorgados (USD)', usd(desc)]);
+    const imp = Calc.sum(ok, 'impuesto'); if (imp > 0) resumen.push(['Impuestos incluidos (USD)', usd(imp)]);
+    if (tasa) resumen.push(['Total en Bs', bs(Calc.sum(ok, 'totalBs'))]);
+    if (hayGan) resumen.push(['Ganancia estimada (USD)', usd(Calc.sum(ok.filter(v => v.ganancia != null), 'ganancia'))]);
+    resumen.push(['TOTAL VENDIDO (USD)', usd(tUsd)]);
+    const blob = await buildTablePDF({ titulo: 'Reporte de ventas', subtitulo: etiqueta, cols, rows: ok, resumen });
+    downloadBlob(blob, `Ventas_${etiqueta.replace(/[^\w]+/g, '_')}.pdf`);
+    toast('PDF guardado en Descargas');
+  },
+  ventasExcel(ventas, etiqueta) {
+    const orden = [...ventas].sort((a, b) => new Date(a.fecha) - new Date(b.fecha));
+    const ok = orden.filter(v => !v.anulada);
+    const hayGan = ok.some(v => v.ganancia != null);
+    const cols = [
+      { title: 'N°', w: 9, get: v => pad6(v.numero || 0) },
+      { title: 'Fecha', w: 12, get: v => fmtDate(new Date(v.fecha)) },
+      { title: 'Hora', w: 11, get: v => fmtTime(new Date(v.fecha)) },
+      { title: 'Cliente', w: 18, get: v => v.cliente || '' },
+      { title: 'Pago', w: 24, get: v => pagoTxt(v) },
+      { title: 'Detalle', w: 48, get: v => Reportes.detalleVenta(v), total: () => `${ok.length} ventas válidas` },
+      { title: 'Subtotal USD', w: 13, tipo: 'dinero', get: v => v.subtotal, total: () => Calc.sum(ok, 'subtotal') },
+      { title: 'Descuento USD', w: 14, tipo: 'dinero', get: v => v.descuento, total: () => Calc.sum(ok, 'descuento') },
+      { title: 'Impuesto USD', w: 13, tipo: 'dinero', get: v => v.impuesto, total: () => Calc.sum(ok, 'impuesto') },
+      { title: 'Total USD', w: 13, tipo: 'dinero', get: v => v.total, total: () => Calc.sum(ok, 'total') },
+      { title: 'Tasa', w: 10, tipo: 'dinero', get: v => v.tasa || null },
+      { title: 'Total Bs', w: 15, tipo: 'dinero', get: v => v.tasa ? v.totalBs : null, total: () => Calc.sum(ok, 'totalBs') },
+      ...(hayGan ? [{ title: 'Ganancia USD', w: 14, tipo: 'dinero', get: v => v.ganancia, total: () => Calc.sum(ok.filter(v => v.ganancia != null), 'ganancia') }] : []),
+      { title: 'Estado', w: 10, get: v => v.anulada ? 'Anulada' : 'Válida' }
+    ];
+    const data = orden.map(v => cols.map(c => c.get(v)));
+    const total = cols.map((c, i) => c.total ? c.total() : (i === 0 ? 'TOTAL' : null));
+    downloadBlob(xlsxBlob({ hoja: 'Ventas', cols, rows: data, total }), `Ventas_${etiqueta.replace(/[^\w]+/g, '_')}.xlsx`);
+    toast('Excel guardado en Descargas');
+  },
+
+  /** Cierre del periodo (día / semana / mes / año): resumen contable en PDF */
+  async cierrePDF(per, ref) {
+    const r = rangoPeriodo(per, ref);
+    const ok = Calc.validas().filter(v => { const d = new Date(v.fecha); return d >= r.from && d < r.to; });
+    const hayGan = ok.some(v => v.ganancia != null), tasa = ok.some(v => v.tasa > 0);
+    const buckets = [];
+    if (per === 'ano') for (let m = 0; m < 12; m++) buckets.push({ label: cap(MESES[m]), a: new Date(r.from.getFullYear(), m, 1), b: new Date(r.from.getFullYear(), m + 1, 1) });
+    else for (let d = new Date(r.from); d < r.to; d = addDays(d, 1)) buckets.push({ label: `${cap(DIAS[d.getDay()])} ${fmtDate(d)}`, a: d, b: addDays(d, 1) });
+    const rows = buckets.map(k => {
+      const vs = ok.filter(v => { const d = new Date(v.fecha); return d >= k.a && d < k.b; });
+      return { label: k.label, n: vs.length, usd: Calc.sum(vs, 'total'), bs: Calc.sum(vs, 'totalBs'), gan: Calc.sum(vs.filter(v => v.ganancia != null), 'ganancia') };
+    }).filter(x => x.n > 0);
+    const cols = [
+      { title: per === 'ano' ? 'MES' : 'DÍA', w: 30, get: x => x.label, bold: true },
+      { title: 'VENTAS', w: 12, align: 'right', get: x => String(x.n) },
+      { title: 'VENDIDO USD', w: 18, align: 'right', get: x => usd(x.usd) },
+      { title: tasa ? 'VENDIDO Bs' : '', w: 20, align: 'right', get: x => tasa ? bs(x.bs) : '' },
+      ...(hayGan ? [{ title: 'GANANCIA USD', w: 18, align: 'right', get: x => usd(x.gan) }] : [])
+    ];
+    const total = Calc.sum(ok, 'total');
+    const resumen = [['Ventas realizadas', String(ok.length)], ['Promedio por venta', usd(ok.length ? total / ok.length : 0)]];
+    const imp = Calc.sum(ok, 'impuesto'); if (imp > 0) resumen.push([`${S.db.config.impuestoNombre || 'Impuesto'} cobrado (USD)`, usd(imp)]);
+    if (tasa) resumen.push(['Total vendido (Bs)', bs(Calc.sum(ok, 'totalBs'))]);
+    if (hayGan) resumen.push(['Ganancia estimada (USD)', usd(Calc.sum(ok.filter(v => v.ganancia != null), 'ganancia'))]);
+    resumen.push(['TOTAL VENDIDO (USD)', usd(total)]);
+    const nombre = { dia: 'diario', semana: 'semanal', mes: 'mensual', ano: 'anual' }[per];
+    const blob = await buildTablePDF({ titulo: `Cierre ${nombre}`, subtitulo: r.label, cols, rows, resumen });
+    downloadBlob(blob, `Cierre_${nombre}_${r.label.replace(/[^\w]+/g, '_')}.pdf`);
+    toast('Cierre guardado en Descargas');
+  }
+};
+
+const conAviso = f => async () => { try { await f(); } catch (e) { console.error(e); toast('No se pudo crear el archivo', 'err'); } };
+Actions['inv-pdf'] = conAviso(() => Reportes.inventarioPDF());
+Actions['inv-csv'] = conAviso(() => Reportes.inventarioExcel());
+
+
+/* inicio.js — Panel de resumen */
+
+const Inicio = {
+  render(root) {
+    const db = S.db, cfg = db.config;
+    const hoy = rangoPeriodo('dia', new Date());
+    const vh = Calc.enRango(hoy.from, hoy.to);
+    const totHoy = Calc.sum(vh, 'total');
+    const bsHoy = Calc.sum(vh, 'totalBs');
+    const valor = round2(db.productos.reduce((s, p) => s + p.stock * p.precio, 0));
+    const alertas = db.productos.filter(p => Calc.agotado(p) || Calc.stockBajo(p)).sort((a, b) => a.stock - b.stock);
+    const h = new Date().getHours();
+    const saludo = h < 12 ? 'Buenos días' : h < 19 ? 'Buenas tardes' : 'Buenas noches';
+
+    // Últimos 7 días
+    const dias = [];
+    for (let i = 6; i >= 0; i--) {
+      const d = addDays(hoy.from, -i);
+      const vs = Calc.enRango(d, addDays(d, 1));
+      dias.push({ label: DIA3[d.getDay()], value: Calc.sum(vs, 'total'), hl: i === 0, title: `${fmtDate(d)}: ${usd(Calc.sum(vs, 'total'))}` });
+    }
+    const semTotal = round2(dias.reduce((s, d) => s + d.value, 0));
+    const recientes = Calc.validas().sort((a, b) => new Date(b.fecha) - new Date(a.fecha)).slice(0, 5);
+
+    root.innerHTML = `
+      <div class="page-head">
+        <div><h1>${saludo}</h1><p class="sub">${cap(DIAS[new Date().getDay()])}, ${new Date().getDate()} de ${MESES[new Date().getMonth()]} de ${new Date().getFullYear()} · ${esc(cfg.negocio)}</p></div>
+        <div class="head-actions"><button class="btn btn-primary" data-action="nav" data-v="ventas">${icon('cart')}<span>Nueva venta</span></button></div>
+      </div>
+
+      ${Calc.hasTasa() ? '' : `<div class="banner">${icon('dollar')}<span>Configura la tasa del dólar para ver los montos en bolívares.</span><button class="btn btn-sm" data-action="edit-tasa">Poner tasa</button></div>`}
+
+      <div class="grid cols-4">
+        <div class="card stat accent"><div class="lab">${icon('cash')}Ventas de hoy</div><div class="val">${usd(totHoy)}</div><div class="sec">${Calc.hasTasa() ? bs(bsHoy) : vh.length + (vh.length === 1 ? ' venta' : ' ventas')}</div></div>
+        <div class="card stat"><div class="lab">${icon('receipt')}Operaciones hoy</div><div class="val">${vh.length}</div><div class="sec">${cfg.costoActivo && vh.some(v => v.ganancia != null) ? 'Ganancia hoy ' + usd(Calc.sum(vh.filter(v => v.ganancia != null), 'ganancia')) : (vh.length ? 'Promedio ' + usd(totHoy / vh.length) : 'Aún sin ventas')}</div></div>
+        <div class="card stat"><div class="lab">${icon('box')}En inventario</div><div class="val">${db.productos.length}</div><div class="sec">${cfg.mostrarValorInventario ? 'Valor ' + usd(valor) + (Calc.hasTasa() ? ' · ' + bs(Calc.toBs(valor)) : '') : 'productos registrados'}</div></div>
+        <div class="card stat"><div class="lab">${icon('alert')}Por reponer</div><div class="val" style="${alertas.length ? 'color:var(--warn)' : ''}">${alertas.length}</div><div class="sec">${alertas.length ? 'Productos con poco stock' : 'Todo en orden'}</div></div>
+      </div>
+
+      <div class="grid main-side" style="margin-top:16px">
+        <div>
+          <div class="card">
+            <div class="card-head"><h3>Ventas de los últimos 7 días</h3><span class="muted">${usd(semTotal)}</span></div>
+            ${semTotal > 0 ? barChart(dias) : `<div class="empty" style="padding:26px"><p>Cuando registres ventas verás aquí cómo van tus días.</p></div>`}
+          </div>
+          <div class="card">
+            <div class="card-head"><h3>Últimas ventas</h3><button class="link" data-action="nav" data-v="historial">Ver historial</button></div>
+            ${recientes.length ? recientes.map(v => `
+              <div class="mov">
+                <div class="m-main"><b>Venta #${pad6(v.numero || 0)}</b><small>${fmtDateTime(new Date(v.fecha))} · ${esc(pagoTxt(v))}</small></div>
+                <div class="m-q" style="text-align:right">${usd(v.total)}${v.tasa > 0 ? `<small style="display:block;color:var(--muted);font-weight:500">${bs(v.totalBs)}</small>` : ''}</div>
+              </div>`).join('') : `<p class="muted">Todavía no hay ventas registradas.</p>`}
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-head"><h3>Hay que reponer</h3>${alertas.length ? `<span class="badge low">${alertas.length}</span>` : ''}</div>
+          ${alertas.length ? alertas.slice(0, 8).map(p => `
+            <div class="mov">
+              <div class="m-main"><b>${esc(nombreCompleto(p))}</b><small>${Calc.agotado(p) ? 'Agotado' : 'Quedan ' + fmtQty(p.stock) + ' ' + uShort(p.unidad)}</small></div>
+              <button class="btn btn-sm btn-soft" data-action="prod-stock" data-id="${p.id}">${icon('plus')}Stock</button>
+            </div>`).join('') : `<p class="muted">Ningún producto está por debajo del mínimo.</p>`}
+          ${alertas.length > 8 ? `<button class="link" style="margin-top:10px" data-action="inv-filtro" data-f="bajo">Ver los ${alertas.length} productos</button>` : ''}
+        </div>
+      </div>`;
+  }
+};
+
+Actions['nav'] = t => App.navigate(t.dataset.v);
+Actions['inv-filtro'] = t => { S.inv.f = t.dataset.f; App.navigate('inventario'); };
+
+
+/* inventario.js — Productos: agregar, editar, ajustar stock, eliminar */
+
+const DEMO = [
+  ['Manzana roja', '', 'Frutas y verduras', 'kg', 2.8, 18.5],
+  ['Cambur', '', 'Frutas y verduras', 'kg', 1.2, 25],
+  ['Queso blanco', '', 'Lácteos', 'kg', 7.5, 6.25],
+  ['Pollo entero', '', 'Carnes', 'kg', 4.2, 14],
+  ['Carne molida', '', 'Carnes', 'kg', 6.8, 3.5],
+  ['Leche líquida', '1 L', 'Lácteos', 'und', 1.9, 24],
+  ['Leche en polvo', '500 g', 'Lácteos', 'und', 5.5, 10],
+  ['Leche en polvo', '1 kg', 'Lácteos', 'und', 10.5, 8],
+  ['Harina de maíz', '1 kg', 'Víveres', 'und', 1.5, 40],
+  ['Arroz', '1 kg', 'Víveres', 'und', 1.3, 30],
+  ['Huevos', 'Cartón 30', 'Víveres', 'und', 4.5, 12],
+  ['Refresco', '2 L', 'Bebidas', 'und', 2.2, 4]
+];
+
+const Inventario = {
+  filtrados() {
+    const q = norm(S.inv.q.trim());
+    return S.db.productos.filter(p => {
+      if (S.inv.f === 'bajo' && !Calc.stockBajo(p)) return false;
+      if (S.inv.f === 'agotado' && !Calc.agotado(p)) return false;
+      if (S.inv.f.startsWith('cat:') && p.categoria !== S.inv.f.slice(4)) return false;
+      if (!q) return true;
+      return norm([p.nombre, p.presentacion, p.categoria, p.sku].join(' ')).includes(q);
+    }).sort((a, b) => nombreCompleto(a).localeCompare(nombreCompleto(b), 'es'));
+  },
+
+  render(root) {
+    root.innerHTML = `
+      <div class="page-head">
+        <div><h1>Inventario</h1><p class="sub" id="inv-sub"></p></div>
+        <div class="head-actions">
+          <button class="btn" data-action="inv-pdf" ${S.db.productos.length ? '' : 'disabled'}>${icon('pdf')}<span>PDF</span></button>
+          <button class="btn" data-action="inv-csv" ${S.db.productos.length ? '' : 'disabled'}>${icon('download')}<span>Excel</span></button>
+          <button class="btn btn-primary" data-action="prod-nuevo">${icon('plus')}<span>Nuevo producto</span></button>
+        </div>
+      </div>
+      <label class="search">${icon('search')}<input type="search" id="inv-q" placeholder="Buscar producto, presentación o código…" value="${esc(S.inv.q)}" data-input="inv-q" autocomplete="off"></label>
+      <div class="chips" id="inv-chips"></div>
+      <div id="inv-list"></div>`;
+    this.renderChips();
+    this.renderList();
+  },
+
+  renderChips() {
+    const ps = S.db.productos;
+    const nBajo = ps.filter(Calc.stockBajo).length, nOut = ps.filter(Calc.agotado).length;
+    const chip = (f, label, n) => `<button class="chip-f ${S.inv.f === f ? 'on' : ''}" data-action="inv-f" data-f="${esc(f)}">${esc(label)}${n != null ? `<span class="n">${n}</span>` : ''}</button>`;
+    const cats = [...new Set(ps.map(p => p.categoria).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'es'));
+    $('#inv-chips').innerHTML = chip('todos', 'Todos', ps.length) + chip('bajo', 'Stock bajo', nBajo) + chip('agotado', 'Agotados', nOut) +
+      cats.map(c => chip('cat:' + c, c, ps.filter(p => p.categoria === c).length)).join('');
+  },
+
+  renderList() {
+    const ps = Inventario.filtrados();
+    const valor = round2(S.db.productos.reduce((s, p) => s + p.stock * p.precio, 0));
+    const n = S.db.productos.length, cfg = S.db.config;
+    let txt = `${n} producto${n === 1 ? '' : 's'}`;
+    if (cfg.mostrarValorInventario && n) {
+      const b = v => Calc.hasTasa() ? ' · ' + bs(Calc.toBs(v)) : '';
+      const conCosto = S.db.productos.filter(p => p.costo > 0);
+      const vCosto = round2(conCosto.reduce((s, p) => s + p.stock * p.costo, 0));
+      txt += (cfg.costoActivo && conCosto.length)
+        ? ` · Invertido (a costo): ${usd(vCosto)}${b(vCosto)} · Valor de venta: ${usd(valor)}${b(valor)}`
+        : ` · Valor actual del inventario: ${usd(valor)}${b(valor)}`;
+    }
+    $('#inv-sub').textContent = txt;
+    const box = $('#inv-list');
+    if (!S.db.productos.length) {
+      box.innerHTML = `<div class="card empty">${icon('box')}<h4>Tu inventario está vacío</h4><p>Agrega tu primer producto o carga unos de ejemplo para probar el sistema.</p>
+        <div class="row-actions" style="justify-content:center"><button class="btn btn-primary" data-action="prod-nuevo">${icon('plus')}Agregar producto</button><button class="btn" data-action="prod-demo">Cargar ejemplos</button></div></div>`;
+      return;
+    }
+    if (!ps.length) { box.innerHTML = `<div class="card empty">${icon('search')}<h4>Sin resultados</h4><p>Prueba con otra búsqueda o filtro.</p></div>`; return; }
+    box.innerHTML = `<div class="products">${ps.map(p => {
+      const out = Calc.agotado(p), low = Calc.stockBajo(p);
+      const st = out ? 'out' : low ? 'low' : '';
+      const min = Math.max(Calc.minimo(p), 0.0001);
+      const pct = Math.min(100, p.stock / (min * 3) * 100);
+      return `<article class="prod">
+        <div class="prod-top">
+          <div class="avatar" style="--h:${hueOf(p.categoria || p.nombre)}">${esc((p.nombre[0] || '?').toUpperCase())}</div>
+          <div class="prod-name"><h4>${esc(p.nombre)}</h4>
+            <div class="meta">${p.presentacion ? `<span class="chip">${esc(p.presentacion)}</span>` : ''}${p.categoria ? `<span>${esc(p.categoria)}</span>` : ''}</div></div>
+          ${out ? '<span class="badge out">Agotado</span>' : low ? '<span class="badge low">Stock bajo</span>' : ''}
+        </div>
+        <div class="prod-mid">
+          <div class="price"><b>${usd(p.precio)}</b><small>por ${uShort(p.unidad)}${Calc.hasTasa() ? ' · ' + bs(Calc.toBs(p.precio)) : ''}</small>
+            ${S.db.config.costoActivo && p.costo > 0 ? `<small style="${p.precio < p.costo ? 'color:var(--danger)' : ''}">Costo ${usd(p.costo)} · ${p.precio < p.costo ? 'pierdes' : 'ganas'} ${fmtNum(Math.abs(Calc.margen(p)), 0)}%</small>` : ''}</div>
+          <div class="stock ${st}"><b>${fmtQty(p.stock)}</b><small>${uShort(p.unidad)} en stock</small></div>
+        </div>
+        <div class="meter ${st}"><i style="width:${pct}%"></i></div>
+        <div class="prod-actions">
+          <button class="btn btn-sm btn-soft" data-action="prod-stock" data-id="${p.id}">${icon('plus')}Stock</button>
+          <button class="btn btn-sm" data-action="prod-editar" data-id="${p.id}">${icon('edit')}Editar</button>
+          <button class="icon-btn danger" data-action="prod-borrar" data-id="${p.id}" aria-label="Eliminar">${icon('trash')}</button>
+        </div>
+      </article>`;
+    }).join('')}</div>`;
+  },
+
+  formProducto(p) {
+    const edit = !!p;
+    p = p || { nombre: '', presentacion: '', categoria: '', unidad: 'und', precio: '', stock: '', minimo: MIN_DEFAULT.und, sku: '' };
+    const unitOpts = Object.keys(UNITS).map(k => `<option value="${k}" ${p.unidad === k ? 'selected' : ''}>${UNITS[k].label}</option>`).join('');
+    return `<div class="form">
+      <div class="field"><label>Nombre del producto *</label><input class="input" name="nombre" value="${esc(p.nombre)}" placeholder="Ej: Leche en polvo" autocomplete="off" ${edit ? '' : 'autofocus'}></div>
+      <div class="field-row">
+        <div class="field"><label>Presentación / tamaño</label><input class="input" name="presentacion" value="${esc(p.presentacion || '')}" placeholder="Ej: 500 g, 1 kg, 2 L"></div>
+        <div class="field"><label>Categoría</label><input class="input" name="categoria" list="cat-list" value="${esc(p.categoria || '')}" placeholder="Elige o escribe una">
+          <datalist id="cat-list">${S.db.categorias.map(c => `<option value="${esc(c)}">`).join('')}</datalist></div>
+      </div>
+      <div class="field"><label>Se vende por</label><select class="select" name="unidad" data-input="prod-unidad" ${edit ? 'disabled' : ''}>${unitOpts}</select></div>
+      ${S.db.config.costoActivo ? `
+      <div class="field-row">
+        <div class="field"><label id="lbl-costo">Costo por ${uShort(p.unidad)} (USD)</label><input class="input" name="costo" type="number" inputmode="decimal" step="any" min="0" value="${p.costo > 0 ? p.costo : ''}" placeholder="Lo que te costó" data-input="prod-calc"></div>
+        <div class="field"><label>% de ganancia</label><input class="input" name="margen" type="number" inputmode="decimal" step="any" min="0" value="${p.costo > 0 ? Math.round(Calc.margen(p) * 10) / 10 : (S.db.config.margenDefecto || '')}" placeholder="Ej: 30" data-input="prod-calc"></div>
+      </div>` : ''}
+      <div class="field"><label id="lbl-precio">Precio de venta por ${uShort(p.unidad)} (USD) *</label><input class="input" name="precio" type="number" inputmode="decimal" step="any" min="0" value="${p.precio}" placeholder="0.00" data-input="prod-precio"></div>
+      <div class="hint" id="precio-bs"></div>
+      <div class="field-row">
+        ${edit ? '' : `<div class="field"><label id="lbl-stock">Stock inicial (${uShort(p.unidad)})</label><input class="input" name="stock" type="number" inputmode="decimal" step="any" min="0" value="${p.stock}" placeholder="0"></div>`}
+        <div class="field"><label id="lbl-min">Avisar si baja de (${uShort(p.unidad)})</label><input class="input" name="minimo" type="number" inputmode="decimal" step="any" min="0" value="${p.minimo ?? S.db.config.stockMinimo}"></div>
+      </div>
+      <div class="field"><label>Código o referencia (opcional)</label><input class="input" name="sku" value="${esc(p.sku || '')}" placeholder="Código de barras, etc."></div>
+      ${edit ? '<div class="hint">La unidad no se puede cambiar. Para cambiar el stock usa el botón «Stock».</div>'
+             : '<div class="tip">Si un producto viene en varios tamaños (leche de 500 g y de 1 kg), crea cada uno por separado con su presentación y su precio.</div>'}
+    </div>`;
+  },
+
+  abrirForm(p) {
+    const m = openModal({
+      title: p ? 'Editar producto' : 'Nuevo producto',
+      html: Inventario.formProducto(p),
+      footer: `<button class="btn" data-modal-close>Cancelar</button><button class="btn btn-primary" data-submit data-action="prod-guardar" data-id="${p ? p.id : ''}">${icon('check')}Guardar</button>`
+    });
+    Inputs['prod-precio']($('[name=precio]', m.el));
+  }
+};
+
+Actions['inv-f'] = t => { S.inv.f = t.dataset.f; Inventario.renderChips(); Inventario.renderList(); };
+Inputs['inv-q'] = t => { S.inv.q = t.value; Inventario.renderList(); };
+Actions['prod-nuevo'] = () => Inventario.abrirForm(null);
+Actions['prod-editar'] = t => Inventario.abrirForm(Calc.prod(t.dataset.id));
+
+Inputs['prod-unidad'] = t => {
+  const m = t.closest('.modal'), u = t.value;
+  $('#lbl-precio', m).textContent = `Precio de venta por ${uShort(u)} (USD) *`;
+  const lc = $('#lbl-costo', m); if (lc) lc.textContent = `Costo por ${uShort(u)} (USD)`;
+  const ls = $('#lbl-stock', m); if (ls) ls.textContent = `Stock inicial (${uShort(u)})`;
+  $('#lbl-min', m).textContent = `Avisar si baja de (${uShort(u)})`;
+  if (ls) $('[name=minimo]', m).value = MIN_DEFAULT[u];
+};
+/* Costo ↔ % ganancia ↔ precio (solo si "Costo y ganancia" está activo en Ajustes) */
+Inputs['prod-calc'] = t => {
+  const m = t.closest('.modal'), f = n => $(`[name=${n}]`, m);
+  const costo = num(f('costo').value), margen = num(f('margen').value), precio = num(f('precio').value);
+  const r4 = x => Math.round(x * 1e4) / 1e4;
+  if (costo > 0 && !isNaN(margen)) f('precio').value = r4(costo * (1 + margen / 100));
+  else if (costo > 0 && isNaN(margen) && precio > 0) f('margen').value = Math.round((precio / costo - 1) * 1000) / 10;
+  Inputs['prod-precio'](f('precio'), true);
+};
+Inputs['prod-precio'] = (t, fromCalc) => {
+  const m = t.closest('.modal'), v = num(t.value), box = $('#precio-bs', m);
+  const fc = $('[name=costo]', m);
+  if (fc && fromCalc !== true) {                              // si cambian el precio a mano, recalcula el % de ganancia
+    const costo = num(fc.value);
+    if (costo > 0 && v > 0) $('[name=margen]', m).value = Math.round((v / costo - 1) * 1000) / 10;
+  }
+  let txt = (Calc.hasTasa() && v > 0) ? `Equivale a ${bs(Calc.toBs(v))} con la tasa actual (${fmtNum(S.db.config.tasa)}). ` : '';
+  if (fc) {
+    const costo = num(fc.value);
+    if (costo > 0 && v > 0) txt += v >= costo ? `Ganas ${usd(v - costo)} por cada unidad vendida.` : `⚠ Estás vendiendo por debajo del costo (pierdes ${usd(costo - v)}).`;
+  }
+  box.textContent = txt;
+};
+
+Actions['prod-guardar'] = t => {
+  const m = t.closest('.modal'), id = t.dataset.id, f = n => $(`[name=${n}]`, m);
+  const nombre = f('nombre').value.trim(), presentacion = f('presentacion').value.trim();
+  const categoria = f('categoria').value.trim(), unidad = f('unidad').value;
+  const precio = num(f('precio').value), minimo = num(f('minimo').value);
+  const sku = f('sku').value.trim();
+  const hayCosto = !!f('costo');
+  const costo = hayCosto ? (f('costo').value === '' ? null : num(f('costo').value)) : undefined;
+  if (hayCosto && costo !== null && (isNaN(costo) || costo < 0)) return toast('Escribe un costo válido', 'err');
+  const stock = id ? null : (f('stock') && f('stock').value !== '' ? num(f('stock').value) : 0);
+  if (!nombre) return toast('Escribe el nombre del producto', 'err');
+  if (isNaN(precio) || precio < 0) return toast('Escribe un precio válido', 'err');
+  if (!id && (isNaN(stock) || stock < 0)) return toast('Escribe un stock válido', 'err');
+  if (unidad === 'und' && !id && !Number.isInteger(stock)) return toast('Los productos por unidad llevan cantidades enteras', 'err');
+  const dup = S.db.productos.find(p => p.id !== id && norm(p.nombre) === norm(nombre) && norm(p.presentacion || '') === norm(presentacion));
+  if (dup) return toast('Ya existe un producto con ese nombre y presentación', 'err');
+  if (categoria && !S.db.categorias.some(c => norm(c) === norm(categoria))) S.db.categorias.push(categoria);
+
+  if (id) {
+    Object.assign(Calc.prod(id), { nombre, presentacion, categoria, precio, minimo: isNaN(minimo) ? S.db.config.stockMinimo : minimo, sku });
+    if (hayCosto) Calc.prod(id).costo = costo;
+    toast('Producto actualizado');
+  } else {
+    const p = { id: uid(), nombre, presentacion, categoria, unidad, precio, stock: rq(stock), minimo: isNaN(minimo) ? MIN_DEFAULT[unidad] : minimo, sku, creado: new Date().toISOString() };
+    if (hayCosto) p.costo = costo;
+    S.db.productos.push(p);
+    if (p.stock > 0) S.db.movimientos.push({ id: uid(), fecha: new Date().toISOString(), pid: p.id, nombre: nombreCompleto(p), tipo: 'entrada', cant: p.stock, unidad, nota: 'Stock inicial' });
+    toast('Producto agregado');
+  }
+  closeTopModal(); Storage.save(); App.render();
+};
+
+Actions['prod-borrar'] = async t => {
+  const p = Calc.prod(t.dataset.id); if (!p) return;
+  const ok = await confirmDialog({ title: 'Eliminar producto', msg: `¿Seguro que quieres eliminar <b>${esc(nombreCompleto(p))}</b> del inventario? El historial de ventas no se borra.`, ok: 'Eliminar', danger: true });
+  if (!ok) return;
+  S.db.productos = S.db.productos.filter(x => x.id !== p.id);
+  S.pos.cart = S.pos.cart.filter(c => c.pid !== p.id);
+  Storage.save(); App.render(); toast('Producto eliminado');
+};
+
+Actions['prod-demo'] = () => {
+  DEMO.forEach(([nombre, presentacion, categoria, unidad, precio, stock]) => {
+    const p = { id: uid(), nombre, presentacion, categoria, unidad, precio, stock, minimo: MIN_DEFAULT[unidad], sku: '', creado: new Date().toISOString() };
+    S.db.productos.push(p);
+    S.db.movimientos.push({ id: uid(), fecha: new Date().toISOString(), pid: p.id, nombre: nombreCompleto(p), tipo: 'entrada', cant: stock, unidad, nota: 'Stock inicial' });
+  });
+  Storage.save(); App.render(); toast('Productos de ejemplo cargados');
+};
+
+/* ----- Ajuste de stock ----- */
+Actions['prod-stock'] = t => {
+  const p = Calc.prod(t.dataset.id); if (!p) return;
+  const units = compatibleUnits(p.unidad);
+  openModal({
+    title: 'Ajustar stock',
+    html: `<div class="form">
+      <div><b>${esc(nombreCompleto(p))}</b><div class="muted">Stock actual: ${fmtQty(p.stock)} ${uShort(p.unidad)}</div></div>
+      <div class="field"><label>¿Qué quieres hacer?</label>
+        <select class="select" name="tipo" data-input="stk-prev">
+          <option value="entrada">Agregar mercancía (entrada)</option>
+          <option value="salida">Quitar mercancía (merma, daño, consumo)</option>
+          <option value="fijar">Corregir el total (conteo físico)</option>
+        </select></div>
+      <div class="field-row">
+        <div class="field"><label>Cantidad</label><input class="input" name="cant" type="number" inputmode="decimal" step="any" min="0" placeholder="0" data-input="stk-prev" autofocus></div>
+        <div class="field"><label>Unidad</label><select class="select" name="ud" data-input="stk-prev">${units.map(u => `<option value="${u}" ${u === p.unidad ? 'selected' : ''}>${UNITS[u].short}</option>`).join('')}</select></div>
+      </div>
+      <div class="field"><label>Nota (opcional)</label><input class="input" name="nota" placeholder="Ej: compra al proveedor" autocomplete="off"></div>
+      <div class="preview-box"><span class="muted">Quedará en</span><b id="stk-new">${fmtQty(p.stock)} ${uShort(p.unidad)}</b></div>
+    </div>`,
+    footer: `<button class="btn" data-modal-close>Cancelar</button><button class="btn btn-primary" data-submit data-action="stk-guardar" data-id="${p.id}">${icon('check')}Guardar</button>`
+  });
+};
+function calcStock(m, p) {
+  const tipo = $('[name=tipo]', m).value, ud = $('[name=ud]', m).value;
+  const c = num($('[name=cant]', m).value);
+  if (isNaN(c)) return { nuevo: p.stock, delta: 0, valid: false };
+  const q = convert(c, ud, p.unidad);
+  const nuevo = tipo === 'entrada' ? rq(p.stock + q) : tipo === 'salida' ? rq(p.stock - q) : q;
+  return { nuevo, delta: rq(nuevo - p.stock), valid: true, tipo };
+}
+Inputs['stk-prev'] = t => {
+  const m = t.closest('.modal'), p = Calc.prod($('[data-action=stk-guardar]', m).dataset.id);
+  const r = calcStock(m, p);
+  const el = $('#stk-new', m);
+  el.textContent = `${fmtQty(r.nuevo)} ${uShort(p.unidad)}`;
+  el.style.color = r.nuevo < 0 ? 'var(--danger)' : '';
+};
+Actions['stk-guardar'] = t => {
+  const m = t.closest('.modal'), p = Calc.prod(t.dataset.id);
+  const r = calcStock(m, p);
+  if (!r.valid || Number($('[name=cant]', m).value) < 0) return toast('Escribe una cantidad válida', 'err');
+  if (r.nuevo < 0) return toast('No puedes quitar más de lo que hay en stock', 'err');
+  if (p.unidad === 'und' && !Number.isInteger(r.nuevo)) return toast('Este producto se maneja en unidades enteras', 'err');
+  if (r.delta === 0) return toast('No hay cambios que guardar', 'err');
+  p.stock = r.nuevo;
+  S.db.movimientos.push({ id: uid(), fecha: new Date().toISOString(), pid: p.id, nombre: nombreCompleto(p), tipo: r.tipo === 'fijar' ? 'ajuste' : r.tipo, cant: r.delta, unidad: p.unidad, nota: $('[name=nota]', m).value.trim() });
+  closeTopModal(); Storage.save(); App.render(); toast('Stock actualizado');
+};
+
+
+/* ventas.js — Punto de venta: cuenta (carrito), impuesto, tasa en Bs, cobro y simulación */
+
+const PAGOS = ['Efectivo USD', 'Efectivo Bs', 'Pago móvil', 'Punto de venta', 'Transferencia', 'Otro'];
+const QUICK = { und: [1, 2, 3, 6, 12], kg: [0.25, 0.5, 1, 2], g: [100, 250, 500, 1000], mg: [100, 250, 500], l: [0.5, 1, 1.5, 2], ml: [250, 500, 1000] };
+
+const Ventas = {
+  impPct() { const c = S.db.config; return (c.impuestoActivo && S.pos.aplicaImp) ? Number(c.impuestoPct) || 0 : 0; },
+
+  resetCart() {
+    const c = S.db.config;
+    Object.assign(S.pos, { cart: [], cliente: '', pago: 'Efectivo USD', pagoDetalle: '', descPct: 0, aplicaImp: !!(c.impuestoActivo && c.impuestoPorDefecto), pane: 'productos', recibido: 0, rmoneda: Calc.hasTasa() ? 'Bs' : 'USD' });
+  },
+
+  /** Campo de texto que aparece al elegir "Otro" (pagos mixtos, por ejemplo) */
+  pagoOtroHtml() {
+    if (S.pos.pago !== 'Otro') return '';
+    return `<div class="field"><label>Detalle del pago</label><input class="input" data-input="pos-pago-det" value="${esc(S.pos.pagoDetalle)}" placeholder="Ej: $5 efectivo + Bs 500 punto" maxlength="120" autocomplete="off"></div>`;
+  },
+
+  /** Vuelto: null si la opción está apagada o no se escribió monto recibido */
+  vueltoInfo() {
+    const P = S.pos;
+    if (!S.db.config.vueltoActivo || !(P.recibido > 0) || !P.cart.length) return null;
+    const moneda = (P.rmoneda === 'Bs' && Calc.hasTasa()) ? 'Bs' : 'USD';
+    const t = Ventas.totales();
+    const debe = moneda === 'Bs' ? Calc.toBs(t.total) : t.total;
+    return { moneda, recibido: P.recibido, debe, diff: round2(P.recibido - debe) };
+  },
+
+  /** Líneas de la cuenta con los precios actuales del inventario */
+  lineas() {
+    S.pos.cart = S.pos.cart.filter(ci => Calc.prod(ci.pid));
+    return S.pos.cart.map(ci => {
+      const p = Calc.prod(ci.pid);
+      return { ci, p, subtotal: round2(p.precio * ci.cant) };
+    });
+  },
+
+  totales() {
+    const ls = Ventas.lineas();
+    return Calc.totales(ls, S.pos.descPct, Ventas.impPct());
+  },
+
+  buildVenta(simulada) {
+    const cfg = S.db.config, P = S.pos;
+    const items = Ventas.lineas().map(({ ci, p, subtotal }) => ({
+      pid: p.id, nombre: p.nombre, presentacion: p.presentacion, unidad: p.unidad,
+      cant: ci.cant, ud: ci.ud, cantShow: rq(convert(ci.cant, p.unidad, ci.ud)), precio: p.precio, subtotal,
+      costo: (cfg.costoActivo && p.costo > 0) ? p.costo : null
+    }));
+    const impPct = Ventas.impPct();
+    const t = Calc.totales(items, P.descPct, impPct);
+    // Ganancia = lo vendido menos lo que costó (solo productos con costo), descontando el descuento proporcional
+    let ganancia = null;
+    const conCosto = items.filter(i => i.costo != null);
+    if (conCosto.length) {
+      const profit = conCosto.reduce((s, i) => s + (i.subtotal - i.costo * i.cant), 0);
+      const subC = conCosto.reduce((s, i) => s + i.subtotal, 0);
+      ganancia = round2(profit - t.descuento * (t.subtotal ? subC / t.subtotal : 0));
+    }
+    const tasa = Calc.hasTasa() ? Number(cfg.tasa) : 0;
+    const vi = Ventas.vueltoInfo();
+    const extra = (vi && vi.diff >= 0) ? { recibido: vi.recibido, recMoneda: vi.moneda, vuelto: vi.diff } : {};
+    return {
+      ...extra, ganancia,
+      id: uid(), fecha: new Date().toISOString(), cliente: P.cliente.trim(), pago: P.pago, pagoDetalle: P.pago === 'Otro' ? (P.pagoDetalle || '').trim() : '', tasa, items,
+      subtotal: t.subtotal, descPct: P.descPct, descuento: t.descuento,
+      impPct, impNombre: cfg.impuestoNombre, impuesto: t.impuesto,
+      total: t.total, totalBs: tasa ? round2(t.total * tasa) : 0, simulada: !!simulada
+    };
+  },
+
+  render(root) {
+    const P = S.pos, cfg = S.db.config;
+    if (!cfg.impuestoActivo) P.aplicaImp = false;
+    root.innerHTML = `
+      <div class="page-head"><div><h1>Vender</h1><p class="sub">Toca un producto para agregarlo a la cuenta</p></div></div>
+      <div class="seg full pos-switch">
+        <button class="${P.pane === 'productos' ? 'on' : ''}" data-action="pos-pane" data-pane="productos">Productos</button>
+        <button class="${P.pane === 'carrito' ? 'on' : ''}" data-action="pos-pane" data-pane="carrito">Cuenta <span class="count" id="pos-count">0</span></button>
+      </div>
+      <div class="pos" data-pane="${P.pane}">
+        <section class="pos-catalog">
+          <label class="search">${icon('search')}<input type="search" placeholder="Buscar producto…" value="${esc(P.q)}" data-input="pos-q" autocomplete="off"></label>
+          <div class="chips" id="pos-chips"></div>
+          <div class="tiles" id="pos-tiles"></div>
+        </section>
+        <aside class="pos-cart card">
+          <div class="card-head"><h3>Cuenta actual</h3><button class="link" data-action="cart-clear">Vaciar</button></div>
+          <div id="cart-items"></div>
+          <div class="cart-opts">
+            <div class="field-row">
+              <div class="field"><label>Cliente (opcional)</label><input class="input" data-input="pos-cliente" value="${esc(P.cliente)}" placeholder="Nombre" autocomplete="off"></div>
+              <div class="field"><label>Forma de pago</label><select class="select" data-input="pos-pago">${PAGOS.map(x => `<option ${x === P.pago ? 'selected' : ''}>${x}</option>`).join('')}</select></div>
+            </div>
+            <div id="pago-otro">${Ventas.pagoOtroHtml()}</div>
+            <div class="field-row" style="align-items:end">
+              <div class="field"><label>Descuento (%)</label><input class="input" type="number" inputmode="decimal" min="0" max="100" step="any" value="${P.descPct || ''}" placeholder="0" data-input="pos-desc"></div>
+              ${cfg.impuestoActivo ? `<label class="switch-line"><input type="checkbox" data-change="pos-imp" ${P.aplicaImp ? 'checked' : ''}><span class="sw"></span><span>${esc(cfg.impuestoNombre)} ${fmtNum(cfg.impuestoPct, cfg.impuestoPct % 1 ? 2 : 0)}%</span></label>` : '<div></div>'}
+            </div>
+            ${cfg.vueltoActivo ? `<div class="field-row">
+              <div class="field"><label>Monto recibido</label><input class="input" type="number" inputmode="decimal" min="0" step="any" value="${P.recibido || ''}" placeholder="Con cuánto paga" data-input="pos-recibido"></div>
+              <div class="field"><label>En</label><select class="select" data-input="pos-rmoneda"><option value="Bs" ${P.rmoneda === 'Bs' ? 'selected' : ''}>Bolívares (Bs)</option><option value="USD" ${P.rmoneda === 'USD' ? 'selected' : ''}>Dólares ($)</option></select></div>
+            </div>` : ''}
+          </div>
+          <div id="cart-totals"></div>
+          <div class="cart-actions">
+            <button class="btn" data-action="pos-simular">${icon('eye')}Simular</button>
+            <button class="btn btn-primary btn-lg" data-action="pos-cobrar">${icon('check')}Cobrar</button>
+          </div>
+        </aside>
+      </div>
+      <div class="cart-bar" id="cart-bar"></div>`;
+    this.renderChips();
+    this.renderTiles();
+    this.renderCart();
+  },
+
+  renderChips() {
+    const cats = [...new Set(S.db.productos.map(p => p.categoria).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'es'));
+    const chip = (c, label) => `<button class="chip-f ${S.pos.cat === c ? 'on' : ''}" data-action="pos-cat" data-c="${esc(c)}">${esc(label)}</button>`;
+    $('#pos-chips').innerHTML = chip('', 'Todos') + cats.map(c => chip(c, c)).join('');
+  },
+
+  renderTiles() {
+    const q = norm(S.pos.q.trim());
+    const ps = S.db.productos.filter(p => (!S.pos.cat || p.categoria === S.pos.cat) && (!q || norm([p.nombre, p.presentacion, p.sku].join(' ')).includes(q)))
+      .sort((a, b) => nombreCompleto(a).localeCompare(nombreCompleto(b), 'es'));
+    const box = $('#pos-tiles');
+    if (!S.db.productos.length) { box.innerHTML = `<div class="card empty" style="grid-column:1/-1">${icon('box')}<h4>No hay productos</h4><p>Primero agrega productos en el inventario.</p><button class="btn btn-primary" data-action="nav" data-v="inventario">Ir al inventario</button></div>`; return; }
+    if (!ps.length) { box.innerHTML = `<p class="muted" style="grid-column:1/-1;padding:20px 4px">No se encontraron productos.</p>`; return; }
+    box.innerHTML = ps.map(p => {
+      const enCarro = S.pos.cart.find(c => c.pid === p.id);
+      return `<button class="tile ${Calc.agotado(p) ? 'out' : ''}" data-action="pos-add" data-id="${p.id}">
+        <div><div class="t-name">${esc(p.nombre)}</div>${p.presentacion ? `<div class="t-pres">${esc(p.presentacion)}</div>` : ''}</div>
+        <div class="t-foot">
+          <div class="t-price">${usd(p.precio)}<small>/${uShort(p.unidad)}</small></div>
+          <div class="t-stock ${Calc.stockBajo(p) ? 'low' : ''}">${Calc.agotado(p) ? 'Agotado' : fmtQty(p.stock) + ' ' + uShort(p.unidad)}${enCarro ? '<br>✓ en cuenta' : ''}</div>
+        </div></button>`;
+    }).join('');
+  },
+
+  renderCart() {
+    const ls = Ventas.lineas(), P = S.pos, t = Ventas.totales(), tasa = Calc.hasTasa();
+    const box = $('#cart-items');
+    if (!box) return;
+    box.innerHTML = ls.length ? ls.map(({ ci, p, subtotal }, i) => {
+      const enUnd = p.unidad === 'und';
+      return `<div class="cart-item">
+        <div><div class="ci-name">${esc(p.nombre)}${p.presentacion ? ` <span class="chip">${esc(p.presentacion)}</span>` : ''}</div>
+          <div class="ci-sub">${usd(p.precio)} / ${uShort(p.unidad)}</div></div>
+        <div class="ci-price">${usd(subtotal)}${tasa ? `<small>${bs(Calc.toBs(subtotal))}</small>` : ''}</div>
+        <div class="ci-ctrl">
+          <div class="stepper">
+            ${enUnd ? `<button data-action="ci-dec" data-i="${i}" aria-label="Menos">${icon('minus')}</button>` : ''}
+            <button class="q" data-action="ci-edit" data-i="${i}" title="Cambiar cantidad">${fmtQty(convert(ci.cant, p.unidad, ci.ud))} ${uShort(ci.ud)}</button>
+            ${enUnd ? `<button data-action="ci-inc" data-i="${i}" aria-label="Más">${icon('plus')}</button>` : ''}
+          </div>
+          <span class="spacer"></span>
+          <button class="btn btn-sm" data-action="ci-del" data-i="${i}" aria-label="Quitar de la cuenta" style="color:var(--danger)">${icon('trash')}Quitar</button>
+        </div></div>`;
+    }).join('') : `<div class="empty" style="padding:26px 10px">${icon('cart')}<p>La cuenta está vacía.<br>Elige productos de la lista.</p></div>`;
+
+    const cfg = S.db.config;
+    $('#cart-totals').innerHTML = `<div class="totals">
+      <div class="row"><span>Subtotal</span><b>${usd(t.subtotal)}</b></div>
+      ${t.descuento > 0 ? `<div class="row"><span>Descuento (${fmtNum(P.descPct, P.descPct % 1 ? 2 : 0)}%)</span><b>-${usd(t.descuento)}</b></div>` : ''}
+      ${Ventas.impPct() > 0 ? `<div class="row"><span>${esc(cfg.impuestoNombre)} (${fmtNum(Ventas.impPct(), Ventas.impPct() % 1 ? 2 : 0)}%)</span><b>${usd(t.impuesto)}</b></div>` : ''}
+      <div class="grand"><span>Total USD</span><strong>${usd(t.total)}</strong></div>
+      ${tasa
+        ? `<div class="grand bs"><span>Total Bs</span><strong>${bs(Calc.toBs(t.total))}</strong></div><div class="tasa-note">Tasa: 1 USD = ${bs(cfg.tasa)}</div>`
+        : `<div class="tasa-note"><button class="link" data-action="edit-tasa">Poner tasa del dólar para ver el total en Bs</button></div>`}
+      ${(() => {
+        const vi = Ventas.vueltoInfo(); if (!vi) return '';
+        const eq = !Calc.hasTasa() ? '' : vi.moneda === 'Bs' ? '≈ ' + usd(Math.abs(vi.diff) / cfg.tasa) : '≈ ' + bs(Math.abs(vi.diff) * cfg.tasa);
+        return `<div class="grand vuelto ${vi.diff < 0 ? 'falta' : ''}"><span>${vi.diff < 0 ? 'Falta' : 'Vuelto'}</span><strong>${fmtM(vi.moneda, Math.abs(vi.diff))}</strong></div>
+          <div class="tasa-note">Recibido ${fmtM(vi.moneda, vi.recibido)} · ${eq}</div>`;
+      })()}
+    </div>`;
+
+    const n = ls.length;
+    const cnt = $('#pos-count'); if (cnt) cnt.textContent = n;
+    const bar = $('#cart-bar');
+    if (bar) {
+      bar.classList.toggle('show', n > 0 && P.pane === 'productos');
+      bar.innerHTML = `<div><b>${usd(t.total)}</b><small>${tasa ? bs(Calc.toBs(t.total)) + ' · ' : ''}${n} producto${n === 1 ? '' : 's'}</small></div>
+        <button class="btn" data-action="pos-pane" data-pane="carrito">Ver cuenta ${icon('chevR')}</button>`;
+    }
+  },
+
+  /** Ventana de cantidad (para peso, volumen o editar) */
+  openQty(pid, idx = -1) {
+    const p = Calc.prod(pid); if (!p) return;
+    const cur = idx >= 0 ? S.pos.cart[idx] : null;
+    const units = compatibleUnits(p.unidad);
+    const u0 = cur ? cur.ud : p.unidad;
+    const v0 = cur ? fmtQty(convert(cur.cant, p.unidad, cur.ud)).replace(/\./g, '').replace(',', '.') : '';
+    openModal({
+      title: nombreCompleto(p),
+      html: `<div class="form" data-pid="${p.id}" data-idx="${idx}">
+        <div class="muted" id="qty-disp"></div>
+        <div class="field-row">
+          <div class="field"><label>Cantidad</label><input class="input" name="cant" type="number" inputmode="decimal" step="any" min="0" value="${v0}" placeholder="0" data-input="qty" autofocus></div>
+          <div class="field"><label>Unidad</label><select class="select" name="ud" data-input="qty-unit">${units.map(u => `<option value="${u}" ${u === u0 ? 'selected' : ''}>${UNITS[u].label}</option>`).join('')}</select></div>
+        </div>
+        <div class="quick" id="qty-quick"></div>
+        <div class="preview-box"><span class="muted">Subtotal</span><div style="text-align:right"><b id="qty-sub">$0,00</b><div class="muted" id="qty-bs"></div></div></div>
+      </div>`,
+      footer: `<button class="btn" data-modal-close>Cancelar</button><button class="btn btn-primary" data-submit data-action="qty-ok">${icon('check')}${cur ? 'Actualizar' : 'Agregar'}</button>`,
+      onMount: m => Ventas.qtyRefresh(m.el)
+    });
+  },
+  disponible(p, idx) {
+    const otros = S.pos.cart.reduce((s, c, i) => s + (c.pid === p.id && i !== idx ? c.cant : 0), 0);
+    return rq(p.stock - otros);
+  },
+  qtyRefresh(root, rebuildQuick = true) {
+    const f = $('[data-pid]', root), p = Calc.prod(f.dataset.pid), idx = Number(f.dataset.idx);
+    const ud = $('[name=ud]', root).value, c = num($('[name=cant]', root).value);
+    $('#qty-disp', root).textContent = `Disponible: ${fmtQty(Ventas.disponible(p, idx))} ${uShort(p.unidad)} · ${usd(p.precio)} por ${uShort(p.unidad)}`;
+    if (rebuildQuick) $('#qty-quick', root).innerHTML = (QUICK[ud] || []).map(q => `<button type="button" class="chip-f" data-action="qty-quick" data-v="${q}">${fmtQty(q)} ${uShort(ud)}</button>`).join('');
+    const sub = (!isNaN(c) && c > 0) ? round2(p.precio * convert(c, ud, p.unidad)) : 0;
+    $('#qty-sub', root).textContent = usd(sub);
+    $('#qty-bs', root).textContent = Calc.hasTasa() ? bs(Calc.toBs(sub)) : '';
+  }
+};
+
+Inputs['pos-q'] = t => { S.pos.q = t.value; Ventas.renderTiles(); };
+Actions['pos-cat'] = t => { S.pos.cat = t.dataset.c; Ventas.renderChips(); Ventas.renderTiles(); };
+Actions['pos-pane'] = t => { S.pos.pane = t.dataset.pane; Ventas.render($('#view')); window.scrollTo(0, 0); };
+Inputs['pos-cliente'] = t => { S.pos.cliente = t.value; };
+Inputs['pos-pago'] = t => {
+  S.pos.pago = t.value;
+  $('#pago-otro').innerHTML = Ventas.pagoOtroHtml();
+  const i = $('#pago-otro input'); if (i) i.focus();
+};
+Inputs['pos-pago-det'] = t => { S.pos.pagoDetalle = t.value; };
+Inputs['pos-recibido'] = t => { const v = num(t.value); S.pos.recibido = isNaN(v) || v < 0 ? 0 : v; Ventas.renderCart(); };
+Inputs['pos-rmoneda'] = t => { S.pos.rmoneda = t.value; Ventas.renderCart(); };
+Inputs['pos-desc'] = t => { let v = num(t.value); if (isNaN(v) || v < 0) v = 0; if (v > 100) { v = 100; t.value = 100; } S.pos.descPct = v; Ventas.renderCart(); };
+Changes['pos-imp'] = t => { S.pos.aplicaImp = t.checked; Ventas.renderCart(); };
+
+Actions['pos-add'] = t => {
+  const p = Calc.prod(t.dataset.id); if (!p || Calc.agotado(p)) return;
+  if (p.unidad === 'und') {
+    const ci = S.pos.cart.find(c => c.pid === p.id);
+    if ((ci ? ci.cant : 0) + 1 > p.stock) return toast(`Solo quedan ${fmtQty(p.stock)} ${uShort(p.unidad)}`, 'err');
+    if (ci) ci.cant += 1; else S.pos.cart.push({ pid: p.id, cant: 1, ud: 'und' });
+    Ventas.renderTiles(); Ventas.renderCart();
+  } else {
+    const idx = S.pos.cart.findIndex(c => c.pid === p.id);
+    Ventas.openQty(p.id, idx);
+  }
+};
+Actions['ci-inc'] = t => {
+  const ci = S.pos.cart[+t.dataset.i], p = Calc.prod(ci.pid);
+  if (ci.cant + 1 > p.stock) return toast(`Solo quedan ${fmtQty(p.stock)} ${uShort(p.unidad)}`, 'err');
+  ci.cant += 1; Ventas.renderCart();
+};
+Actions['ci-dec'] = t => {
+  const i = +t.dataset.i, ci = S.pos.cart[i];
+  if (ci.cant <= 1) S.pos.cart.splice(i, 1); else ci.cant -= 1;
+  Ventas.renderTiles(); Ventas.renderCart();
+};
+Actions['ci-del'] = t => { S.pos.cart.splice(+t.dataset.i, 1); Ventas.renderTiles(); Ventas.renderCart(); };
+Actions['ci-edit'] = t => { const i = +t.dataset.i; Ventas.openQty(S.pos.cart[i].pid, i); };
+Actions['cart-clear'] = async () => {
+  if (!S.pos.cart.length) return;
+  if (await confirmDialog({ title: 'Vaciar cuenta', msg: '¿Quitar todos los productos de la cuenta actual?', ok: 'Vaciar', danger: true })) {
+    S.pos.cart = []; Ventas.renderTiles(); Ventas.renderCart();
+  }
+};
+
+Inputs['qty'] = t => Ventas.qtyRefresh(t.closest('.modal'), false);
+Inputs['qty-unit'] = t => Ventas.qtyRefresh(t.closest('.modal'), true);
+Actions['qty-quick'] = t => {
+  const m = t.closest('.modal'), inp = $('[name=cant]', m);
+  inp.value = t.dataset.v; Ventas.qtyRefresh(m, false);
+};
+Actions['qty-ok'] = t => {
+  const m = t.closest('.modal'), f = $('[data-pid]', m);
+  const p = Calc.prod(f.dataset.pid), idx = Number(f.dataset.idx);
+  const ud = $('[name=ud]', m).value, c = num($('[name=cant]', m).value);
+  if (isNaN(c) || c <= 0) return toast('Escribe una cantidad mayor a 0', 'err');
+  const cant = convert(c, ud, p.unidad);
+  if (p.unidad === 'und' && !Number.isInteger(cant)) return toast('Este producto solo se vende en unidades enteras', 'err');
+  const disp = Ventas.disponible(p, idx);
+  if (cant > disp + 1e-9) return toast(`No hay suficiente stock. Disponible: ${fmtQty(disp)} ${uShort(p.unidad)}`, 'err');
+  if (idx >= 0) S.pos.cart[idx] = { pid: p.id, cant, ud };
+  else S.pos.cart.push({ pid: p.id, cant, ud });
+  closeTopModal(); Ventas.renderTiles(); Ventas.renderCart();
+};
+
+Actions['pos-simular'] = () => {
+  if (!S.pos.cart.length) return toast('Agrega productos a la cuenta primero', 'err');
+  Ticket.openModal(Ventas.buildVenta(true), { title: 'Simulación de venta' });
+};
+
+Actions['pos-cobrar'] = () => {
+  const P = S.pos;
+  if (!P.cart.length) return toast('Agrega productos a la cuenta primero', 'err');
+  for (const { ci, p } of Ventas.lineas()) {
+    if (ci.cant > p.stock + 1e-9) return toast(`No hay suficiente stock de ${nombreCompleto(p)}`, 'err');
+  }
+  const vi = Ventas.vueltoInfo();
+  if (vi && vi.diff < 0) return toast(`El monto recibido no alcanza. Faltan ${fmtM(vi.moneda, -vi.diff)}`, 'err');
+  const v = Ventas.buildVenta(false);
+  v.numero = ++S.db.contadorVentas;
+  P.cart.forEach(ci => {
+    const p = Calc.prod(ci.pid);
+    p.stock = rq(p.stock - ci.cant);
+    S.db.movimientos.push({ id: uid(), fecha: v.fecha, pid: p.id, nombre: nombreCompleto(p), tipo: 'venta', cant: -ci.cant, unidad: p.unidad, nota: 'Venta #' + pad6(v.numero) });
+  });
+  delete v.simulada;
+  S.db.ventas.push(v);
+  Storage.save();
+  Ventas.resetCart();
+  App.render();
+  Ticket.openModal(v, { title: 'Venta registrada', exito: true });
+  App.recordarRespaldo();
+};
+
+
+/* historial.js — Ventas y movimientos por día / semana / mes / año */
+
+const hayBsGan = arr => arr.some(v => v.tasa > 0);
+
+const Historial = {
+  datos() {
+    const H = S.hist, r = rangoPeriodo(H.per, H.ref);
+    const todas = S.db.ventas.filter(v => { const d = new Date(v.fecha); return d >= r.from && d < r.to; })
+      .sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
+    const validas = todas.filter(v => !v.anulada);
+    return { r, todas, validas };
+  },
+
+  render(root) {
+    const H = S.hist, { r, todas, validas } = this.datos();
+    const total = Calc.sum(validas, 'total'), totalBs = Calc.sum(validas, 'totalBs');
+    const hayBs = validas.some(v => v.tasa > 0);
+    const imp = Calc.sum(validas, 'impuesto');
+
+    root.innerHTML = `
+      <div class="page-head">
+        <div><h1>Historial</h1><p class="sub">Revisa lo que vendiste y cómo se movió tu inventario</p></div>
+        <div class="head-actions">
+          <button class="btn btn-soft" data-action="hist-cierre" ${validas.length ? '' : 'disabled'}>${icon('receipt')}<span>Cierre ${{ dia: 'del día', semana: 'de la semana', mes: 'del mes', ano: 'del año' }[H.per]}</span></button>
+          <button class="btn" data-action="hist-pdf" ${validas.length ? '' : 'disabled'}>${icon('pdf')}<span>PDF</span></button>
+          <button class="btn" data-action="hist-csv" ${todas.length ? '' : 'disabled'}>${icon('download')}<span>Excel</span></button>
+        </div>
+      </div>
+
+      <div class="period-bar">
+        <div class="seg">${Object.entries(PERIODOS).map(([k, l]) => `<button class="${H.per === k ? 'on' : ''}" data-action="hist-per" data-per="${k}">${l}</button>`).join('')}</div>
+        <div class="period-nav">
+          <button class="icon-btn" data-action="hist-prev" aria-label="Anterior">${icon('chevL')}</button>
+          <button class="btn btn-ghost label" data-action="hist-fecha" title="Elegir fecha">${icon('calendar')}${esc(r.label)}</button>
+          <input type="date" id="hist-date" value="${toInputDate(H.ref)}" data-change="hist-date">
+          <button class="icon-btn" data-action="hist-next" aria-label="Siguiente">${icon('chevR')}</button>
+          <button class="btn btn-sm" data-action="hist-hoy">Hoy</button>
+        </div>
+      </div>
+
+      ${(() => {
+        const cfg = S.db.config, conGan = validas.filter(v => v.ganancia != null), gan = Calc.sum(conGan, 'ganancia');
+        const cuarta = cfg.costoActivo
+          ? `<div class="card stat"><div class="lab">${icon('dollar')}Ganancia</div><div class="val" style="color:${gan < 0 ? 'var(--danger)' : 'var(--ok)'}">${usd(gan)}</div><div class="sec">${hayBsGan(conGan) ? bs(Calc.sum(conGan.map(v => ({ g: v.tasa > 0 ? round2(v.ganancia * v.tasa) : 0 })), 'g')) + ' · ' : ''}${conGan.length < validas.length ? 'solo productos con costo' : 'estimada'}</div></div>`
+          : (cfg.impuestoActivo ? `<div class="card stat"><div class="lab">${icon('dollar')}${esc(cfg.impuestoNombre || 'Impuesto')}</div><div class="val">${usd(imp)}</div><div class="sec">cobrado en el periodo</div></div>` : '');
+        return `<div class="grid ${cuarta ? 'cols-4' : 'cols-3'}" style="margin-bottom:16px">
+        <div class="card stat accent"><div class="lab">${icon('cash')}Vendido</div><div class="val">${usd(total)}</div><div class="sec">${hayBs ? bs(totalBs) : 'En dólares'}</div></div>
+        <div class="card stat"><div class="lab">${icon('receipt')}Ventas</div><div class="val">${validas.length}</div><div class="sec">${todas.length - validas.length ? (todas.length - validas.length) + ' anulada(s)' : 'Sin anuladas'}</div></div>
+        <div class="card stat"><div class="lab">${icon('tag')}Promedio</div><div class="val">${usd(validas.length ? total / validas.length : 0)}</div><div class="sec">por venta</div></div>
+        ${cuarta}
+      </div>`;
+      })()}
+
+      <div class="seg" style="margin-bottom:14px">
+        <button class="${H.tab === 'ventas' ? 'on' : ''}" data-action="hist-tab" data-tab="ventas">Ventas</button>
+        <button class="${H.tab === 'movs' ? 'on' : ''}" data-action="hist-tab" data-tab="movs">Movimientos de inventario</button>
+      </div>
+      <div id="hist-body"></div>`;
+    this.body();
+  },
+
+  desglose(validas, r) {
+    const per = S.hist.per;
+    if (per === 'dia') return '';
+    let data = [];
+    if (per === 'ano') {
+      for (let m = 0; m < 12; m++) {
+        const a = new Date(r.from.getFullYear(), m, 1), b = new Date(r.from.getFullYear(), m + 1, 1);
+        const t = Calc.sum(validas.filter(v => { const d = new Date(v.fecha); return d >= a && d < b; }), 'total');
+        data.push({ label: MES3[m], value: t, title: `${cap(MESES[m])}: ${usd(t)}` });
+      }
+    } else {
+      for (let d = new Date(r.from); d < r.to; d = addDays(d, 1)) {
+        const a = d, b = addDays(d, 1);
+        const t = Calc.sum(validas.filter(v => { const x = new Date(v.fecha); return x >= a && x < b; }), 'total');
+        data.push({ label: per === 'semana' ? `${DIA3[a.getDay()]} ${a.getDate()}` : String(a.getDate()), value: t, title: `${fmtDate(a)}: ${usd(t)}` });
+      }
+    }
+    if (!data.some(d => d.value > 0)) return '';
+    return `<div class="card" style="margin-bottom:16px"><div class="card-head"><h3>${per === 'ano' ? 'Ventas por mes' : 'Ventas por día'}</h3></div>${barChart(data, { height: 120 })}</div>`;
+  },
+
+  body() {
+    const H = S.hist, { r, todas, validas } = this.datos(), box = $('#hist-body');
+    if (H.tab === 'movs') return this.movs(box, r);
+
+    // Productos más vendidos
+    const mapa = {};
+    validas.forEach(v => v.items.forEach(i => {
+      const k = nombreCompleto(i);
+      mapa[k] = mapa[k] || { nombre: k, usd: 0, cant: 0, ud: i.unidad };
+      mapa[k].usd += i.subtotal; mapa[k].cant += i.cant;
+    }));
+    const top = Object.values(mapa).sort((a, b) => b.usd - a.usd).slice(0, 5);
+    const maxTop = top.length ? top[0].usd : 1;
+
+    if (!todas.length) {
+      box.innerHTML = `<div class="card empty">${icon('receipt')}<h4>Sin ventas en este periodo</h4><p>Cuando registres ventas aparecerán aquí.</p></div>`;
+      return;
+    }
+    box.innerHTML = `
+      ${this.desglose(validas, r)}
+      <div class="grid main-side">
+        <div>${todas.map(v => this.ventaHtml(v)).join('')}</div>
+        <div class="card">
+          <div class="card-head"><h3>Más vendidos</h3></div>
+          ${top.length ? `<div class="rank">${top.map(t => `<div class="rank-row"><div class="rk-top"><span>${esc(t.nombre)}</span><b>${usd(t.usd)}</b></div><div class="meter"><i style="width:${t.usd / maxTop * 100}%"></i></div></div>`).join('')}</div>` : '<p class="muted">Sin datos.</p>'}
+        </div>
+      </div>`;
+  },
+
+  ventaHtml(v) {
+    const d = new Date(v.fecha), p = (n, dec = 0) => fmtNum(n, n % 1 ? 2 : dec);
+    return `<details class="sale ${v.anulada ? 'void' : ''}">
+      <summary>
+        <div class="s-l"><b>Venta #${pad6(v.numero || 0)} ${v.anulada ? '<span class="badge void">Anulada</span>' : ''}</b><small>${fmtDateTime(d)} · ${esc(pagoTxt(v))}${v.cliente ? ' · ' + esc(v.cliente) : ''}</small></div>
+        <div class="s-r"><b>${usd(v.total)}</b>${v.tasa > 0 ? `<small>${bs(v.totalBs)}</small>` : ''}</div>
+      </summary>
+      <div class="sale-body">
+        ${v.items.map(i => `<div class="line"><div>${esc(nombreCompleto(i))}<small>${fmtQty(i.cantShow ?? i.cant)} ${uShort(i.ud || i.unidad)} × ${usd(i.precio)}/${uShort(i.unidad)}</small></div><b>${usd(i.subtotal)}</b></div>`).join('')}
+        <div class="sale-sum">
+          <div><span>Subtotal</span><span>${usd(v.subtotal)}</span></div>
+          ${v.descuento > 0 ? `<div><span>Descuento (${p(v.descPct)}%)</span><span>-${usd(v.descuento)}</span></div>` : ''}
+          ${v.impuesto > 0 ? `<div><span>${esc(v.impNombre || 'Impuesto')} (${p(v.impPct)}%)</span><span>${usd(v.impuesto)}</span></div>` : ''}
+          <div class="t"><span>Total</span><span>${usd(v.total)}</span></div>
+          ${v.tasa > 0 ? `<div class="t"><span>Total Bs (tasa ${fmtNum(v.tasa)})</span><span>${bs(v.totalBs)}</span></div>` : ''}
+          ${v.ganancia != null && S.db.config.costoActivo ? `<div><span>Ganancia de esta venta</span><span style="color:${v.ganancia < 0 ? 'var(--danger)' : 'var(--ok)'}">${usd(v.ganancia)}</span></div>` : ''}
+          ${v.recibido > 0 ? `<div><span>Recibido ${fmtM(v.recMoneda, v.recibido)}</span><span>Vuelto ${fmtM(v.recMoneda, v.vuelto)}</span></div>` : ''}
+        </div>
+        <div class="sale-actions">
+          <button class="btn btn-sm btn-soft" data-action="sale-ticket" data-id="${v.id}">${icon('receipt')}Ver ticket</button>
+          ${v.anulada ? '' : `<button class="btn btn-sm" data-action="sale-anular" data-id="${v.id}">Anular venta</button>`}
+        </div>
+      </div></details>`;
+  },
+
+  movs(box, r) {
+    const ms = S.db.movimientos.filter(m => { const d = new Date(m.fecha); return d >= r.from && d < r.to; })
+      .sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
+    if (!ms.length) { box.innerHTML = `<div class="card empty">${icon('box')}<h4>Sin movimientos en este periodo</h4></div>`; return; }
+    const tipos = { entrada: ['Entrada', 'ok'], salida: ['Salida', 'low'], venta: ['Venta', ''], ajuste: ['Ajuste', ''], anulacion: ['Anulación', 'ok'] };
+    box.innerHTML = `<div class="card">${ms.map(m => {
+      const [lab, cls] = tipos[m.tipo] || [m.tipo, ''];
+      return `<div class="mov"><div class="m-main"><b>${esc(m.nombre)}</b><small>${fmtDateTime(new Date(m.fecha))}${m.nota ? ' · ' + esc(m.nota) : ''}</small></div>
+        <span class="badge ${cls}">${lab}</span>
+        <div class="m-q ${m.cant >= 0 ? 'pos' : 'neg'}">${m.cant >= 0 ? '+' : ''}${fmtQty(m.cant)} ${uShort(m.unidad)}</div></div>`;
+    }).join('')}</div>`;
+  }
+};
+
+const histRefresh = () => Historial.render($('#view'));
+Actions['hist-per'] = t => { S.hist.per = t.dataset.per; histRefresh(); };
+Actions['hist-tab'] = t => { S.hist.tab = t.dataset.tab; histRefresh(); };
+Actions['hist-prev'] = () => { S.hist.ref = shiftPeriodo(S.hist.per, S.hist.ref, -1); histRefresh(); };
+Actions['hist-next'] = () => { S.hist.ref = shiftPeriodo(S.hist.per, S.hist.ref, 1); histRefresh(); };
+Actions['hist-hoy'] = () => { S.hist.ref = new Date(); histRefresh(); };
+Actions['hist-fecha'] = () => { const i = $('#hist-date'); try { i.showPicker(); } catch (e) { i.focus(); i.click(); } };
+Changes['hist-date'] = t => { if (t.value) { S.hist.ref = fromInputDate(t.value); histRefresh(); } };
+
+Actions['hist-cierre'] = conAviso(() => Reportes.cierrePDF(S.hist.per, S.hist.ref));
+Actions['hist-pdf'] = conAviso(() => { const { r, validas } = Historial.datos(); return Reportes.ventasPDF(validas, r.label); });
+Actions['hist-csv'] = conAviso(() => { const { r, todas } = Historial.datos(); return Reportes.ventasExcel(todas, r.label); });
+
+Actions['sale-ticket'] = t => {
+  const v = S.db.ventas.find(x => x.id === t.dataset.id);
+  if (v) Ticket.openModal(v, { title: 'Venta #' + pad6(v.numero || 0) });
+};
+Actions['sale-anular'] = async t => {
+  const v = S.db.ventas.find(x => x.id === t.dataset.id); if (!v) return;
+  const ok = await confirmDialog({ title: 'Anular venta', msg: `Se anulará la venta #${pad6(v.numero || 0)} y la mercancía <b>volverá al inventario</b>. ¿Continuar?`, ok: 'Anular venta', danger: true });
+  if (!ok) return;
+  v.anulada = true;
+  v.items.forEach(i => {
+    const p = Calc.prod(i.pid);
+    if (p) p.stock = rq(p.stock + i.cant);
+    S.db.movimientos.push({ id: uid(), fecha: new Date().toISOString(), pid: i.pid, nombre: nombreCompleto(i), tipo: 'anulacion', cant: i.cant, unidad: i.unidad, nota: 'Anulación venta #' + pad6(v.numero || 0) });
+  });
+  Storage.save(); histRefresh(); toast('Venta anulada y stock devuelto');
+};
+
+
+/* ajustes.js — Personalización del negocio, tasa del dólar, impuesto y datos */
+
+const PRESETS = [
+  ['#0f766e', 'Verde azulado'], ['#2563eb', 'Azul'], ['#4f46e5', 'Índigo'], ['#7c3aed', 'Morado'],
+  ['#db2777', 'Rosa'], ['#dc2626', 'Rojo'], ['#ea580c', 'Naranja'], ['#ca8a04', 'Mostaza'],
+  ['#16a34a', 'Verde'], ['#334155', 'Grafito']
+];
+
+function tiempoRelativo(iso) {
+  if (!iso) return 'nunca';
+  const min = Math.floor((Date.now() - new Date(iso)) / 60000);
+  if (min < 1) return 'hace un momento';
+  if (min < 60) return `hace ${min} min`;
+  const h = Math.floor(min / 60);
+  if (h < 24) return `hace ${h} h`;
+  const d = Math.floor(h / 24);
+  return d === 1 ? 'ayer' : `hace ${d} días`;
+}
+
+const Ajustes = {
+  render(root) {
+    const c = S.db.config;
+    const modoArchivo = Storage.mode === 'file' && Storage.hasHandle;
+    root.innerHTML = `
+      <div class="page-head"><div><h1>Ajustes</h1><p class="sub">Personaliza el sistema a tu negocio</p></div></div>
+      <div class="grid cols-2" style="align-items:start">
+        <div class="stack">
+
+          <div class="card"><div class="card-head"><h3>Tu negocio</h3></div><div class="stack">
+            <div class="logo-edit">
+              <div class="brand-mark" id="aj-logo">${c.logo ? `<img src="${c.logo}" alt="Logo">` : esc((c.negocio[0] || 'B').toUpperCase())}</div>
+              <div class="row-actions">
+                <label class="btn btn-sm">${icon('upload')}Subir logo<input type="file" accept="image/*" hidden data-change="cfg-logo"></label>
+                ${c.logo ? `<button class="btn btn-sm btn-ghost" data-action="cfg-logo-quitar">Quitar</button>` : ''}
+              </div>
+            </div>
+            <div class="field"><label>Nombre de la bodega</label><input class="input" value="${esc(c.negocio)}" data-input="cfg-negocio" autocomplete="off"></div>
+            <div class="field-row">
+              <div class="field"><label>RIF (opcional)</label><input class="input" value="${esc(c.rif)}" data-input="cfg-text" data-k="rif" autocomplete="off"></div>
+              <div class="field"><label>Teléfono (opcional)</label><input class="input" value="${esc(c.telefono)}" data-input="cfg-text" data-k="telefono" autocomplete="off"></div>
+            </div>
+            <div class="field"><label>Dirección (opcional)</label><input class="input" value="${esc(c.direccion)}" data-input="cfg-text" data-k="direccion" autocomplete="off"></div>
+            <div class="field"><label>Título del ticket</label><input class="input" value="${esc(c.ticketTitulo)}" data-input="cfg-text" data-k="ticketTitulo" placeholder="TICKET DE VENTA" autocomplete="off"></div>
+            <div class="field"><label>Mensaje al final del ticket</label><input class="input" value="${esc(c.pie)}" data-input="cfg-text" data-k="pie" autocomplete="off"></div>
+          </div></div>
+
+          <div class="card"><div class="card-head"><h3>Apariencia</h3></div><div class="stack">
+            <div class="field"><label>Color principal</label>
+              <div class="swatches">
+                ${PRESETS.map(([hx, n]) => `<button class="swatch ${c.color.toLowerCase() === hx ? 'on' : ''}" style="background:${hx}" title="${n}" data-action="cfg-preset" data-c="${hx}" aria-label="${n}"></button>`).join('')}
+                <input type="color" class="color-custom" value="${c.color}" data-input="cfg-color" title="Elegir otro color">
+              </div></div>
+            <div class="field"><label>Tema</label>
+              <div class="seg full">
+                ${[['auto', 'Automático'], ['claro', 'Claro'], ['oscuro', 'Oscuro']].map(([k, l]) => `<button class="${c.tema === k ? 'on' : ''}" data-action="cfg-tema" data-t="${k}">${l}</button>`).join('')}
+              </div></div>
+          </div></div>
+
+          <div class="card"><div class="card-head"><h3>Categorías</h3></div><div class="stack">
+            <div class="cat-list">${S.db.categorias.map((cat, i) => `<span class="cat-pill">${esc(cat)}<button data-action="cat-del" data-i="${i}" aria-label="Quitar">${icon('x')}</button></span>`).join('')}</div>
+            <div class="field-row" style="grid-template-columns:1fr auto;align-items:end">
+              <div class="field"><label>Nueva categoría</label><input class="input" id="cat-new" placeholder="Ej: Charcutería" data-submit-cat autocomplete="off"></div>
+              <button class="btn btn-soft" data-action="cat-add">${icon('plus')}Agregar</button>
+            </div>
+          </div></div>
+        </div>
+
+        <div class="stack">
+          <div class="card"><div class="card-head"><h3>Dólar y bolívares</h3></div><div class="stack">
+            <p class="muted-p">Escribe cuántos bolívares vale 1 dólar. Todos los precios se guardan en dólares y el sistema calcula el total en bolívares al vender.</p>
+            <div class="field-row" style="grid-template-columns:1fr auto;align-items:end">
+              <div class="field"><label>1 USD = Bs</label><input class="input" id="aj-tasa" type="number" inputmode="decimal" step="any" min="0" value="${c.tasa || ''}" placeholder="Ej: 36,50"></div>
+              <button class="btn btn-primary" data-action="cfg-tasa">${icon('check')}Guardar</button>
+            </div>
+            <div class="hint">${c.tasaFecha ? 'Actualizada ' + tiempoRelativo(c.tasaFecha) + ' (' + fmtDateTime(new Date(c.tasaFecha)) + ')' : 'Aún no has puesto la tasa.'}</div>
+          </div></div>
+
+          <div class="card"><div class="card-head"><h3>Impuesto en las ventas</h3></div><div class="stack">
+            <label class="switch-line"><input type="checkbox" ${c.impuestoActivo ? 'checked' : ''} data-change="cfg-bool" data-k="impuestoActivo"><span class="sw"></span><span>Mostrar opción de impuesto al vender</span></label>
+            <div class="field-row">
+              <div class="field"><label>Nombre</label><input class="input" value="${esc(c.impuestoNombre)}" data-input="cfg-text" data-k="impuestoNombre" placeholder="IVA" autocomplete="off"></div>
+              <div class="field"><label>Porcentaje (%)</label><input class="input" type="number" inputmode="decimal" step="any" min="0" value="${c.impuestoPct}" data-input="cfg-num" data-k="impuestoPct"></div>
+            </div>
+            <label class="switch-line"><input type="checkbox" ${c.impuestoPorDefecto ? 'checked' : ''} data-change="cfg-bool" data-k="impuestoPorDefecto"><span class="sw"></span><span>Aplicarlo por defecto en cada venta</span></label>
+            <div class="hint">Si no lo activas por defecto, en la pantalla de ventas podrás encenderlo solo cuando lo necesites.</div>
+          </div></div>
+
+          <div class="card"><div class="card-head"><h3>Costo y ganancia</h3></div><div class="stack">
+            <label class="switch-line"><input type="checkbox" ${c.costoActivo ? 'checked' : ''} data-change="cfg-bool" data-k="costoActivo"><span class="sw"></span><span>Manejar costo y ganancia</span></label>
+            <div class="field"><label>% de ganancia habitual (se sugiere en productos nuevos)</label><input class="input" type="number" inputmode="decimal" step="any" min="0" value="${c.margenDefecto}" data-input="cfg-num" data-k="margenDefecto"></div>
+            <div class="hint">Al activarlo, cada producto pide cuánto te costó y el sistema calcula el precio con tu % de ganancia (o te dice cuánto ganas si pones el precio a mano). En Historial verás la ganancia de cada venta y del periodo. Si lo apagas, el sistema funciona solo con precios.</div>
+          </div></div>
+
+          <div class="card"><div class="card-head"><h3>Vuelto</h3></div><div class="stack">
+            <label class="switch-line"><input type="checkbox" ${c.vueltoActivo ? 'checked' : ''} data-change="cfg-bool" data-k="vueltoActivo"><span class="sw"></span><span>Calcular el vuelto al cobrar</span></label>
+            <div class="hint">Al vender podrás escribir con cuánto paga el cliente (en Bs o en $) y el sistema te dice cuánto devolver. Si lo apagas, no aparece nada.</div>
+          </div></div>
+
+          <div class="card"><div class="card-head"><h3>Inventario</h3></div><div class="stack">
+            <div class="field"><label>Avisar de stock bajo cuando queden menos de</label><input class="input" type="number" inputmode="decimal" step="any" min="0" value="${c.stockMinimo}" data-input="cfg-num" data-k="stockMinimo"></div>
+            <div class="hint">Es el valor general. Cada producto también puede tener su propio mínimo al editarlo.</div>
+            <label class="switch-line"><input type="checkbox" ${c.mostrarValorInventario ? 'checked' : ''} data-change="cfg-bool" data-k="mostrarValorInventario"><span class="sw"></span><span>Mostrar el valor total del inventario</span></label>
+            <div class="hint">Si lo apagas, bajo el título solo dirá cuántos productos hay (sin el dinero total). Aplica en Inventario e Inicio.</div>
+          </div></div>
+
+          ${esAppInstalada() ? '' : `<div class="card"><div class="card-head"><h3>Instalar en el teléfono</h3></div><div class="stack">
+            <p class="muted-p">Instálalo para tenerlo como una app en la pantalla de inicio, con su ícono, a pantalla completa y funcionando sin internet.</p>
+            ${installEvt ? `<button class="btn btn-primary" data-action="pwa-install">${icon('download')}Instalar app</button>` : `<div class="hint">
+              <b>Android (Chrome):</b> menú ⋮ → «Instalar app» o «Agregar a la pantalla de inicio».<br>
+              <b>iPhone (Safari):</b> botón Compartir → «Agregar a inicio».<br>
+              ${window.isSecureContext ? '' : 'Para que aparezca la opción de instalar, el sistema debe abrirse desde una dirección https (publicada) y no desde un archivo o una red local.'}</div>`}
+          </div></div>`}
+
+          <div class="card"><div class="card-head"><h3>Tus datos</h3></div><div class="stack">
+            <div>
+              <div class="kv"><span>Dónde se guardan</span><b>${modoArchivo ? 'Archivo en tu equipo' : 'Este dispositivo'}</b></div>
+              ${modoArchivo ? `<div class="kv"><span>Archivo</span><b>${esc(Storage.fileName)}</b></div>` : `<div class="kv"><span>Último respaldo</span><b>${tiempoRelativo(c.ultimoRespaldo)}</b></div>`}
+              <div class="kv"><span>Productos / Ventas</span><b>${S.db.productos.length} / ${S.db.ventas.length}</b></div>
+            </div>
+            <p class="muted-p">${modoArchivo
+              ? 'Cada cambio se guarda solo dentro de ese archivo. Puedes copiarlo a un pendrive cuando quieras.'
+              : 'En este navegador el archivo no se puede actualizar solo. Pulsa «Guardar respaldo» con frecuencia: se guarda un archivo .json en Descargas/Documentos que puedes volver a abrir.'}</p>
+            <div class="row-actions">
+              <button class="btn btn-primary" data-action="cfg-respaldo">${icon('save')}Guardar respaldo</button>
+              <button class="btn" data-action="cfg-importar">${icon('folder')}Abrir archivo…</button>
+              ${Storage.supportsFile ? `<button class="btn" data-action="cfg-crear-archivo">Crear archivo nuevo</button>` : ''}
+            </div>
+            <input type="file" id="aj-import" accept=".json,application/json" hidden data-change="cfg-import-file">
+            <div><button class="btn btn-sm btn-ghost" style="color:var(--danger)" data-action="cfg-borrar">${icon('trash')}Borrar todos los datos</button></div>
+          </div></div>
+        </div>
+      </div>`;
+  }
+};
+
+/* ----- Texto / números / interruptores genéricos ----- */
+Inputs['cfg-text'] = t => { S.db.config[t.dataset.k] = t.value; Storage.save(); App.refreshChrome(); };
+Inputs['cfg-num'] = t => { const v = num(t.value); S.db.config[t.dataset.k] = isNaN(v) || v < 0 ? 0 : v; Storage.save(); };
+Changes['cfg-bool'] = t => { S.db.config[t.dataset.k] = t.checked; Storage.save(); if (t.dataset.k === 'vueltoActivo') S.pos.recibido = 0; };
+Inputs['cfg-negocio'] = t => {
+  S.db.config.negocio = t.value.trim() || 'Mi Bodega';
+  Storage.save(); App.refreshChrome();
+  const l = $('#aj-logo'); if (l && !S.db.config.logo) l.textContent = (S.db.config.negocio[0] || 'B').toUpperCase();
+};
+
+/* ----- Color y tema ----- */
+Actions['cfg-preset'] = t => { S.db.config.color = t.dataset.c; Storage.save(); App.applyTheme(); Ajustes.render($('#view')); };
+Inputs['cfg-color'] = t => { S.db.config.color = t.value; Storage.save(); App.applyTheme(); };
+Actions['cfg-tema'] = t => { S.db.config.tema = t.dataset.t; Storage.save(); App.applyTheme(); Ajustes.render($('#view')); };
+
+/* ----- Logo ----- */
+Changes['cfg-logo'] = t => {
+  const file = t.files[0]; if (!file) return;
+  const rd = new FileReader();
+  rd.onload = () => {
+    const img = new Image();
+    img.onload = () => {
+      const k = Math.min(1, 320 / Math.max(img.width, img.height));
+      const cv = document.createElement('canvas');
+      cv.width = Math.round(img.width * k); cv.height = Math.round(img.height * k);
+      const g = cv.getContext('2d'); g.fillStyle = '#fff'; g.fillRect(0, 0, cv.width, cv.height); g.drawImage(img, 0, 0, cv.width, cv.height);
+      S.db.config.logo = cv.toDataURL('image/jpeg', 0.88);
+      Storage.save(); App.refreshChrome(); Ajustes.render($('#view')); toast('Logo actualizado');
+    };
+    img.onerror = () => toast('No se pudo leer la imagen', 'err');
+    img.src = rd.result;
+  };
+  rd.readAsDataURL(file); t.value = '';
+};
+Actions['cfg-logo-quitar'] = () => { S.db.config.logo = ''; Storage.save(); App.refreshChrome(); Ajustes.render($('#view')); };
+
+/* ----- Tasa del dólar ----- */
+function guardarTasa(v) {
+  if (isNaN(v) || v <= 0) return toast('Escribe una tasa válida (mayor a 0)', 'err'), false;
+  S.db.config.tasa = round2(v);
+  S.db.config.tasaFecha = new Date().toISOString();
+  Storage.save(); App.render(); App.refreshChrome();
+  toast('Tasa actualizada: 1 USD = ' + bs(S.db.config.tasa));
+  return true;
+}
+Actions['cfg-tasa'] = () => guardarTasa(num($('#aj-tasa').value));
+Actions['edit-tasa'] = () => {
+  const c = S.db.config;
+  openModal({
+    title: 'Tasa del dólar',
+    html: `<div class="form"><p class="muted-p">¿A cuántos bolívares está hoy 1 dólar?</p>
+      <div class="field"><label>1 USD = Bs</label><input class="input" id="tasa-modal" type="number" inputmode="decimal" step="any" min="0" value="${c.tasa || ''}" placeholder="Ej: 36,50" autofocus></div>
+      ${c.tasaFecha ? `<div class="hint">Última actualización: ${fmtDateTime(new Date(c.tasaFecha))}</div>` : ''}</div>`,
+    footer: `<button class="btn" data-modal-close>Cancelar</button><button class="btn btn-primary" data-submit data-action="tasa-ok">${icon('check')}Guardar</button>`
+  });
+};
+Actions['tasa-ok'] = () => { if (guardarTasa(num($('#tasa-modal').value))) closeTopModal(); };
+
+/* ----- Categorías ----- */
+Actions['cat-add'] = () => {
+  const i = $('#cat-new'), v = i.value.trim();
+  if (!v) return;
+  if (S.db.categorias.some(c => norm(c) === norm(v))) return toast('Esa categoría ya existe', 'err');
+  S.db.categorias.push(v); Storage.save(); Ajustes.render($('#view'));
+};
+document.addEventListener('keydown', e => { if (e.key === 'Enter' && e.target.matches('[data-submit-cat]')) { e.preventDefault(); Actions['cat-add'](); } });
+Actions['cat-del'] = t => { S.db.categorias.splice(+t.dataset.i, 1); Storage.save(); Ajustes.render($('#view')); };
+
+/* ----- Datos: respaldo, importar, crear archivo, borrar ----- */
+Actions['cfg-respaldo'] = () => { Storage.exportBackup(); setTimeout(() => App.refreshChrome(), 300); };
+
+async function cargarDB(db, aviso) {
+  S.db = db; App.applyTheme();
+  await Storage.saveNow();
+  App.render(); App.refreshChrome();
+  toast(aviso);
+}
+Actions['cfg-importar'] = async () => {
+  if (Storage.supportsFile) {
+    if (!await confirmDialog({ title: 'Abrir otro archivo', msg: 'Se cargarán los datos del archivo que elijas y el sistema empezará a guardar en él.', ok: 'Elegir archivo' })) return;
+    try { await cargarDB(await Storage.openFile(), 'Archivo abierto correctamente'); }
+    catch (e) { if (e.name !== 'AbortError') toast('No se pudo abrir el archivo', 'err'); }
+  } else $('#aj-import').click();
+};
+Changes['cfg-import-file'] = async t => {
+  const f = t.files[0]; if (!f) return;
+  try {
+    const db = Storage.parseText(await f.text());
+    if (!await confirmDialog({ title: 'Reemplazar datos', msg: `Se reemplazarán los datos actuales por los del archivo <b>${esc(f.name)}</b> (${db.productos.length} productos, ${db.ventas.length} ventas).`, ok: 'Reemplazar', danger: true })) { t.value = ''; return; }
+    await cargarDB(db, 'Datos cargados correctamente');
+  } catch (e) { toast('El archivo no es válido', 'err'); }
+  t.value = '';
+};
+Actions['cfg-crear-archivo'] = async () => {
+  try {
+    const actual = S.db;
+    const db = await Storage.createFile();
+    Object.assign(db, { config: { ...actual.config }, categorias: [...actual.categorias], productos: actual.productos, ventas: actual.ventas, movimientos: actual.movimientos, contadorVentas: actual.contadorVentas });
+    S.db = db; await Storage.saveNow(); App.render(); App.refreshChrome();
+    toast('Archivo creado: ' + Storage.fileName);
+  } catch (e) { if (e.name !== 'AbortError') toast('No se pudo crear el archivo', 'err'); }
+};
+Actions['cfg-borrar'] = () => {
+  openModal({
+    title: 'Borrar todos los datos',
+    html: `<div class="form"><p class="muted-p">Se borrarán <b>todos los productos, ventas e historial</b>. Esta acción no se puede deshacer. Antes de seguir, guarda un respaldo.</p>
+      <div class="field"><label>Escribe BORRAR para confirmar</label><input class="input" id="borrar-conf" autocomplete="off" autofocus></div></div>`,
+    footer: `<button class="btn" data-modal-close>Cancelar</button><button class="btn btn-danger" data-submit data-action="cfg-borrar-ok">Borrar todo</button>`
+  });
+};
+Actions['cfg-borrar-ok'] = async () => {
+  if ($('#borrar-conf').value.trim().toUpperCase() !== 'BORRAR') return toast('Escribe BORRAR para confirmar', 'err');
+  const c = S.db.config, nuevo = defaultDB();
+  nuevo.config = { ...c };
+  S.db = nuevo; Ventas.resetCart();
+  await Storage.saveNow(); closeTopModal(); App.render(); toast('Datos borrados');
+};
+
+
+/* app.js — Arranque, navegación, tema y pantalla de bienvenida */
+
+const VIEWS = {
+  inicio: { label: 'Inicio', icon: 'home', mod: () => Inicio },
+  inventario: { label: 'Inventario', icon: 'box', mod: () => Inventario },
+  ventas: { label: 'Vender', icon: 'cart', mod: () => Ventas },
+  historial: { label: 'Historial', icon: 'chart', mod: () => Historial },
+  ajustes: { label: 'Ajustes', icon: 'settings', mod: () => Ajustes }
+};
+
+const App = {
+  _recordado: false,
+
+  /* ---------- Tema y color ---------- */
+  applyTheme() {
+    const c = S.db ? S.db.config : { color: '#0f766e', tema: 'auto' };
+    const root = document.documentElement;
+    const [r, g, b] = hex01(c.color || '#0f766e');
+    const lum = 0.2126 * r + 0.7152 * g + 0.0722 * b;
+    root.style.setProperty('--brand', c.color || '#0f766e');
+    root.style.setProperty('--on-brand', lum > 0.6 ? '#10141a' : '#ffffff');
+    const dark = c.tema === 'oscuro' || (c.tema !== 'claro' && window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches);
+    root.dataset.theme = dark ? 'dark' : 'light';
+    const meta = $('meta[name=theme-color]'); if (meta) meta.content = c.color || '#0f766e';
+  },
+
+  /* ---------- Estructura principal ---------- */
+  launch() {
+    App.applyTheme();
+    Ventas.resetCart();
+    $('#root').innerHTML = `
+      <div class="app">
+        <aside class="sidebar">
+          <div class="brand brand-slot"></div>
+          <nav class="nav">${Object.entries(VIEWS).map(([k, v]) => `<a href="#/${k}" class="nav-item" data-view="${k}">${icon(v.icon)}<span>${v.label}</span></a>`).join('')}</nav>
+          <div class="side-foot" id="side-foot"></div>
+        </aside>
+        <div class="main-col">
+          <header class="topbar">
+            <div class="brand brand-slot"></div>
+            <div class="spacer"></div>
+            <button class="chip-btn tasa" id="chip-tasa" data-action="edit-tasa"></button>
+            <button class="chip-btn" id="chip-save" data-action="save-chip"></button>
+          </header>
+          <main id="view" class="view"></main>
+        </div>
+        <nav class="bottom-nav">${Object.entries(VIEWS).map(([k, v]) => `<a href="#/${k}" class="nav-item" data-view="${k}">${icon(v.icon)}<span>${v.label}</span></a>`).join('')}</nav>
+      </div>`;
+    App.refreshChrome();
+    const v = (location.hash.match(/^#\/(\w+)/) || [])[1];
+    App.go(VIEWS[v] ? v : 'inicio');
+  },
+
+  go(v) {
+    S.view = v;
+    $$('.nav-item').forEach(a => a.classList.toggle('active', a.dataset.view === v));
+    window.scrollTo(0, 0);
+    App.render();
+  },
+  navigate(v) { if (location.hash === '#/' + v) App.go(v); else location.hash = '#/' + v; },
+  render() {
+    const root = $('#view'); if (!root) return;
+    VIEWS[S.view].mod().render(root);
+  },
+
+  brandHTML() {
+    const c = S.db.config;
+    return `<div class="brand-mark">${c.logo ? `<img src="${c.logo}" alt="">` : esc((c.negocio[0] || 'B').toUpperCase())}</div>
+      <div class="brand-txt"><strong>${esc(c.negocio)}</strong><small>Inventario y ventas</small></div>`;
+  },
+
+  saveChipInfo() {
+    const c = S.db.config, st = Storage.status;
+    if (Storage.mode === 'file' && Storage.hasHandle) {
+      if (st === 'saving') return { cls: '', ic: 'refresh', txt: 'Guardando…' };
+      if (st === 'error') return { cls: 'err', ic: 'alert', txt: 'Error al guardar' };
+      return { cls: 'ok', ic: 'check', txt: 'Guardado' };
+    }
+    const hayDatos = S.db.productos.length || S.db.ventas.length;
+    const dias = c.ultimoRespaldo ? (Date.now() - new Date(c.ultimoRespaldo)) / 864e5 : Infinity;
+    return { cls: hayDatos && dias >= 2 ? 'warn' : '', ic: 'save', txt: c.ultimoRespaldo ? 'Respaldo ' + tiempoRelativo(c.ultimoRespaldo) : 'Guardar respaldo' };
+  },
+
+  /** Nombre e ícono de la pestaña / acceso directo: usan el nombre y el logo del negocio */
+  setIdentity() {
+    const c = S.db.config;
+    document.title = c.negocio || 'Sistema de Bodega';
+    ['icon', 'apple-touch-icon'].forEach(rel => {
+      let l = document.querySelector(`link[rel="${rel}"]`);
+      if (!l) { l = document.createElement('link'); l.rel = rel; document.head.appendChild(l); }
+      if (l.dataset.base === undefined) l.dataset.base = l.getAttribute('href') || '';
+      if (c.logo) l.href = c.logo; else if (l.dataset.base) l.setAttribute('href', l.dataset.base); else l.removeAttribute('href');
+    });
+  },
+
+  refreshChrome() {
+    if (!$('#chip-tasa')) return;
+    App.setIdentity();
+    const c = S.db.config;
+    $$('.brand-slot').forEach(b => b.innerHTML = App.brandHTML());
+    $('#chip-tasa').innerHTML = Calc.hasTasa() ? `${icon('dollar')}<span>1 USD = <b>${bs(c.tasa)}</b></span>` : `${icon('dollar')}<span>Poner tasa</span>`;
+    const s = App.saveChipInfo(), chip = $('#chip-save');
+    chip.className = 'chip-btn ' + s.cls;
+    chip.innerHTML = `${icon(s.ic)}<span class="hide-sm">${esc(s.txt)}</span>`;
+    chip.title = s.txt;
+    const foot = $('#side-foot');
+    if (foot) foot.textContent = Storage.mode === 'file' && Storage.hasHandle ? 'Archivo: ' + Storage.fileName : 'Modo compatible: guarda respaldos';
+  },
+
+  recordarRespaldo() {
+    if (App._recordado || (Storage.mode === 'file' && Storage.hasHandle)) return;
+    const u = S.db.config.ultimoRespaldo;
+    if (!u || Date.now() - new Date(u) > 864e5) {
+      App._recordado = true;
+      setTimeout(() => toast('Recuerda guardar un respaldo (chip de arriba o Ajustes)'), 1200);
+    }
+  },
+
+  /* ---------- Pantalla de bienvenida ---------- */
+  welcome(info) {
+    const modoArchivo = Storage.supportsFile;
+    let botones;
+    if (modoArchivo) {
+      botones = `
+        ${info.fileName ? `<button class="btn btn-primary btn-lg btn-block" data-action="w-continue">${icon('folder')}Continuar con «${esc(info.fileName)}»</button>` : ''}
+        <button class="btn ${info.fileName ? '' : 'btn-primary'} btn-lg btn-block" data-action="w-create">${icon('plus')}Crear archivo de datos nuevo</button>
+        <button class="btn btn-lg btn-block" data-action="w-open">${icon('folder')}Abrir un archivo existente</button>
+        <button class="link" data-action="w-local">Usar sin archivo (solo en este navegador)</button>`;
+    } else {
+      botones = `
+        <button class="btn btn-primary btn-lg btn-block" data-action="w-local">${icon('check')}Empezar</button>
+        <button class="btn btn-lg btn-block" data-action="w-import">${icon('folder')}Abrir un respaldo (.json)</button>`;
+    }
+    $('#root').innerHTML = `
+      <div class="welcome"><div class="card welcome-card">
+        <div class="brand-mark">B</div>
+        <h1>Sistema de Bodega</h1>
+        <p>Inventario, ventas y reportes en un solo lugar.${modoArchivo
+          ? ' Tus datos viven en un <b>archivo dentro de tu equipo</b>: no dependen del navegador ni de internet.'
+          : ' Funciona sin internet. Guarda respaldos con frecuencia para no perder tu información.'}</p>
+        <div class="stack">${botones}</div>
+        <input type="file" id="w-file" accept=".json,application/json" hidden data-change="w-file">
+        ${modoArchivo ? '' : '<p class="small muted">En este navegador el archivo no se puede actualizar solo. Para guardado automático en archivo usa Chrome o Edge en una computadora.</p>'}
+      </div></div>`;
+  },
+
+  async entrar(db) {
+    S.db = db;
+    Storage.save();
+    App.launch();
+  }
+};
+
+/* ----- Acciones de la bienvenida ----- */
+const abortado = e => e && (e.name === 'AbortError');
+Actions['w-continue'] = async () => {
+  try { App.entrar(await Storage.resume()); } catch (e) { if (!abortado(e)) toast('No se pudo abrir el archivo. Elige uno manualmente.', 'err'); }
+};
+Actions['w-open'] = async () => {
+  try { App.entrar(await Storage.openFile()); } catch (e) { if (!abortado(e)) toast('No se pudo abrir el archivo', 'err'); }
+};
+Actions['w-create'] = async () => {
+  try { App.entrar(await Storage.createFile()); } catch (e) { if (!abortado(e)) toast('No se pudo crear el archivo', 'err'); }
+};
+Actions['w-local'] = async () => App.entrar(await Storage.useLocalOnly());
+Actions['w-import'] = () => $('#w-file').click();
+Changes['w-file'] = async t => {
+  const f = t.files[0]; if (!f) return;
+  try { App.entrar(Storage.parseText(await f.text())); } catch (e) { toast('El archivo no es válido', 'err'); }
+  t.value = '';
+};
+
+Actions['save-chip'] = () => {
+  if (Storage.mode === 'file' && Storage.hasHandle) toast('Guardado automático en: ' + Storage.fileName);
+  else Storage.exportBackup();
+  setTimeout(() => App.refreshChrome(), 300);
+};
+
+/* ----- Instalación como app (PWA) ----- */
+let installEvt = null;
+window.addEventListener('beforeinstallprompt', e => {
+  e.preventDefault(); installEvt = e;
+  if (S.db && S.view === 'ajustes') Ajustes.render($('#view'));
+});
+window.addEventListener('appinstalled', () => { installEvt = null; toast('App instalada en tu pantalla de inicio'); if (S.db && S.view === 'ajustes') Ajustes.render($('#view')); });
+Actions['pwa-install'] = async () => {
+  if (!installEvt) return;
+  installEvt.prompt();
+  await installEvt.userChoice.catch(() => {});
+  installEvt = null;
+  if (S.view === 'ajustes') Ajustes.render($('#view'));
+};
+const esAppInstalada = () => (window.matchMedia && matchMedia('(display-mode: standalone)').matches) || navigator.standalone === true;
+if ('serviceWorker' in navigator && (location.protocol === 'https:' || ['localhost', '127.0.0.1'].includes(location.hostname))) {
+  window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
+}
+// Pide al navegador que NO borre los datos cuando falte espacio
+if (navigator.storage && navigator.storage.persist) navigator.storage.persist().catch(() => {});
+
+/* ----- Arranque ----- */
+window.addEventListener('hashchange', () => {
+  if (!S.db) return;
+  const v = (location.hash.match(/^#\/(\w+)/) || [])[1];
+  if (VIEWS[v]) App.go(v);
+});
+Storage.onStatus(() => { if (S.db) App.refreshChrome(); });
+if (window.matchMedia) matchMedia('(prefers-color-scheme: dark)').addEventListener?.('change', () => App.applyTheme());
+
+(async function boot() {
+  App.applyTheme();
+  let r;
+  try { r = await Storage.start(); } catch (e) { r = { needsAction: true }; }
+  if (r.db) { S.db = r.db; App.launch(); } else App.welcome(r);
+})();
+
+</script>
+</body>
+</html>
