@@ -1,8 +1,0 @@
-/* Reglas de impresión: al imprimir se oculta toda la aplicación
-   y solo queda visible la hoja limpia (ticket) dentro de #print-area. */
-@media print {
-  html, body { background: #fff !important; margin: 0; padding: 0; }
-  #root, #toasts, .modal-wrap { display: none !important; }
-  #print-area { display: block !important; }
-  .print-ticket { display: block; width: 80mm; max-width: 100%; margin: 0 auto; }
-}
